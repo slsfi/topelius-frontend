@@ -5,7 +5,7 @@ export const config: Config = {
     siteURLOrigin: "https://topelius.sls.fi",
     projectNameDB: "topelius",
     projectId: 10,
-    backendBaseURL: "https://testa-vonwright.sls.fi:8000/digitaledition",
+    backendBaseURL: "https://api.sls.fi/digitaledition",
     alternateFacsimileBaseURL: "",
     i18n: {
       languages: [
@@ -22,12 +22,12 @@ export const config: Config = {
       enabled: true,
       image: {
         sv: {
-          altText: "alt-text",
-          URL: "assets/images/home-page-banner.jpg"
+          altText: "Svartvitt porträttfoto av Zacharias Topelius taget av Daniel Nyblin 1881, beskuret (Museiverket, Helsingfors, signum HK19621012:15).",
+          URL: "assets/images/og/topelius_nyblin_1881_museovirasto_HK19621012-15.jpg"
         },
         fi: {
-          altText: "alt-teksti",
-          URL: "assets/images/home-page-banner.jpg"
+          altText: "Daniel Nyblinin valokuvaama mustavalkoinen muotokuva Zacharias Topeliuksesta 1881, leikattu (Museovirasto, Helsinki, tunniste HK19621012:15).",
+          URL: "assets/images/og/topelius_nyblin_1881_museovirasto_HK19621012-15.jpg"
         }
       }
     }
@@ -60,52 +60,7 @@ export const config: Config = {
         204, 212, 209]
     ]
   },
-  ebooks: [
-    {
-      title: "Bröd och bot",
-      filename: "norrback-brod-och-bot.epub",
-      externalFileURL: "",
-      coverURL: "",
-      downloadOptions: [
-        {
-          url: "https://www.sls.fi/sv/utgivning/historiska-recept",
-          label: ""
-        }
-      ]
-    },
-    {
-      title: "Marriage Conditions in a Palestinian Village I (epub)",
-      filename: "marriage-conditions-1.epub",
-      externalFileURL: "https://api.sls.fi/digitaledition/granqvist/files/30/epub/30_11672_Marriage_Conditions_1.epub/",
-      coverURL: "",
-      downloadOptions: [
-        {
-          url: "https://api.sls.fi/digitaledition/granqvist/files/30/epub/30_11672_Marriage_Conditions_1.epub/",
-          label: "EPUB"
-        },
-        {
-          url: "https://api.sls.fi/digitaledition/granqvist/files/30/pdf/30_11672_Marriage_Conditions_1.pdf/",
-          label: "PDF"
-        }
-      ]
-    },
-    {
-      title: "Marriage Conditions in a Palestinian Village I (pdf)",
-      filename: "marriage-conditions-1.pdf",
-      externalFileURL: "https://api.sls.fi/digitaledition/granqvist/files/30/pdf/30_11672_Marriage_Conditions_1.pdf/",
-      coverURL: "",
-      downloadOptions: [
-        {
-          url: "https://api.sls.fi/digitaledition/granqvist/files/30/epub/30_11672_Marriage_Conditions_1.epub/",
-          label: "EPUB"
-        },
-        {
-          url: "https://api.sls.fi/digitaledition/granqvist/files/30/pdf/30_11672_Marriage_Conditions_1.pdf/",
-          label: "PDF"
-        }
-      ]
-    }
-  ],
+  ebooks: [],
   page: {
     about: {
       initialPageNode: "01-01"
@@ -248,7 +203,7 @@ export const config: Config = {
       }
     },
     mediaCollection: {
-      showURNButton: true
+      showURNButton: false
     },
     text: {
       defaultViews: ["readingtext", "comments", "facsimiles"],
@@ -317,7 +272,7 @@ export const config: Config = {
       items: {
         home: false,
         about: true,
-        ebooks: true,
+        ebooks: false,
         collections: true,
         mediaCollections: true,
         indexKeywords: false,
