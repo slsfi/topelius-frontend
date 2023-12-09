@@ -477,3 +477,55 @@ a.cky-banner-element {
 #cky-settings-popup {
 	font-family: var(--font-stack-app-base);
 }
+
+/*
+Legacy styles for intro TOC and some headings in actual intro only used
+in the Finnish intros that have not been converted to new coding style yet.
+These styles must be removed when the Finnish intros have been updated.
+*/
+page-introduction #TOC h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+page-introduction #TOC h2.contentSection.smallCaps {
+  font-size: 1.2em;
+  margin-bottom: .6em;
+  margin-top: 1.2em;
+  padding-top: .2em;
+  font-variant: small-caps;
+  font-weight: 600;
+  line-height: 1;
+}
+page-introduction #TOC h5 {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  margin-top: 0.1rem;
+}
+page-introduction #TOC h5.tei.contentSub2 {
+  font-size: 1em;
+  margin-bottom: .4em;
+  margin-top: .1em;
+  font-weight: 600;
+  line-height: 1;
+}
+page-introduction div[data-id="cont_introduction"] h2.tei.section {
+  text-align: left !important;
+  font-weight: normal !important;
+  margin: 1.4em 0 1.3em 0 !important;
+  font-size: 1.4em !important;
+}
+page-introduction div[data-id="cont_introduction"] h3.italics {
+  text-align: left !important;
+  font-style: italic;
+  font-weight: normal !important;
+  margin: 1.3em 0 1.2em 0 !important;
+  font-size: 1.2em !important;
+}
+page-introduction div[data-id="cont_introduction"] h4 {
+  font-style: italic;
+  text-align: left;
+  font-weight: normal;
+  font-size: 1em;
+  margin: 1.1em 0 1em 0;
+}
+/* End of legacy intro styles */
