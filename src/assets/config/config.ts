@@ -23,11 +23,11 @@ export const config: Config = {
       image: {
         sv: {
           altText: "Svartvitt porträttfoto av Zacharias Topelius taget av Daniel Nyblin 1881, beskuret (Museiverket, Helsingfors, signum HK19621012:15).",
-          URL: "assets/images/og/topelius_nyblin_1881_museovirasto_HK19621012-15.jpg"
+          URL: "assets/images/open-graph/topelius_nyblin_1881_museovirasto_HK19621012-15.jpg"
         },
         fi: {
           altText: "Daniel Nyblinin valokuvaama mustavalkoinen muotokuva Zacharias Topeliuksesta 1881, leikattu (Museovirasto, Helsinki, tunniste HK19621012:15).",
-          URL: "assets/images/og/topelius_nyblin_1881_museovirasto_HK19621012-15.jpg"
+          URL: "assets/images/open-graph/topelius_nyblin_1881_museovirasto_HK19621012-15.jpg"
         }
       }
     }
