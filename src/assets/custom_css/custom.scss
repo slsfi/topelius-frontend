@@ -188,3 +188,344 @@
   }
 
 */
+
+/* Override CSS variables */
+:root {
+  --primary-color:                       #2b3d55;
+  --primary-color-rgb:                   43, 61, 85;
+  --secondary-color:                     #ccced3;
+  --default-link-color:                  #8d1c60;
+  --fab-button-primary-background-color: #623247;
+  --outline-button-color:                #375181;
+}
+
+ion-app[class][class] {
+  --secondary-toolbar-color:                     #d1d2c5;
+
+  --side-menu-text-color:                        #fff;
+  --side-menu-background-color:                  #623247;
+  --side-menu-divider-color:                     #6d5252;
+  --side-menu-hover-color:                       #bc97a7;
+  --side-menu-description-text-color:            #e0e0e0;
+  --side-menu-collection-title-background-color: #3f1f2e;
+  --side-menu-back-button-text-color:            var(--side-menu-text-color);
+  --side-menu-back-button-background-color:      var(--side-menu-background-color);
+  --side-menu-selected-font-weight:              normal;
+  --side-menu-selected-background-color:         #8f4f6b;
+  --side-menu-selected-description-text-color:   #f7f7f7;
+}
+
+page-elastic-search[class][class] {
+  --date-histogram-year-in-range-color: #c71a23;
+}
+
+/* Custom, project specific styles */
+
+/* Sidans rubrik på ingångssidan. */
+page-home {
+  .portrait-mode h1.site-title.site-title.site-title {
+    font-family: "Crimson Pro", "SourceSerif", serif;
+    font-size: 2.8em;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 0.042em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .frontpage-editions-list {
+    column-gap: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2.75em 0;
+
+    p {
+      margin: 0;
+    }
+
+    ul {
+      margin-top: 0;
+    }
+
+    li {
+      padding-bottom: 0.25em;
+    }
+  }
+
+  .frontpage-editions-list-col {
+    max-width: 440px;
+    width: 100%;
+  }
+
+  /* Unesco logon i markdown på startsidan. */
+  img[src$="#front-page-unesco-logo"] {
+    display: block;
+    margin: 3em auto;
+  }
+} 
+
+div.tei {
+  /* Indrag för strofer i Publicistiken och dramatiken i Läsning för barn. */
+  p.lgIndent {
+    margin-left: 80px !important;
+    text-indent: -35px !important;
+
+    &.lIndent {
+      margin-left: 115px !important;
+      text-indent: -35px !important;
+    }
+  }
+
+  /* Rubrikstilar för akter och scener i Dramatik. */
+  h2.tei.act {
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    margin: 4em 0 1.25em 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  h3.tei.scene {
+    font-style: italic;
+    font-weight: 400;
+    margin: 2.5em 0 1em 0;
+    text-align: center;
+  }
+
+  /* Marginaler i Dramatik. */
+  div.drama {
+    p.center + p.invisiblelg {
+      margin-bottom: 0 !important;
+    }
+    p.invisiblelg + p.center:not(.topMargin) {
+      margin-top: -1em !important;
+    }
+    h3.scene + p.noIndent + p.invisiblelg + p.l {
+      margin-top: -1em !important;
+    }
+    p.center.topMargin + h5.sub2est {
+      margin-top: 0 !important;
+    }
+    p.center.topMargin + h5.sub2est + p.invisiblelg {
+      margin-bottom: 0 !important;
+    }
+    p.center.topMargin + h5.sub2est + p.invisiblelg + p.l {
+      margin-top: -0.8em !important;
+    }
+    h5.sub2est + p.center.topMargin {
+      margin-top: -0.8em !important;
+    }
+    h5.sub2est + p.invisiblelg {
+      margin-bottom: 0 !important;
+    }
+    h5.sub2est + p.invisiblelg + p.l {
+      margin-top: -0.8em !important;
+    }
+  }
+  p.tei.dramasub {
+    font-size: 1.0589em;
+    font-style: italic;
+    font-weight: normal;
+    margin: 1em 0 1.5em 0;
+    text-align: center;
+    text-indent: 0;
+  }
+  p.tei.dramasub + h2.tei.act {
+    margin-top: 2em;
+  }
+  h4.tei.castlistheading {
+    font-weight: bold;
+  }
+  h5.tei.incorppoem {
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    margin: 1.3em 0 0.5em 45px;
+    text-align: left;
+  }
+  h5.tei.incorppoem > .stageincorpheading {
+    letter-spacing: normal;
+  }
+  h5.tei.incorppoem + p.tei.invisiblelg {
+    margin-bottom: 0 !important;
+  }
+  h6.tei.incorpsub {
+    font-weight: normal;
+    font-style: normal;
+    margin: 1em 0 0 0;
+    text-align: center;
+  }
+  .castlistwrapper {
+    margin: 2em 0 1.5em 1.25em;
+  }
+  .dramaversereply {
+    margin: 1em 0 0 45px;
+  }
+  h5.tei.incorppoem + .dramaversereply {
+    margin-top: 0;
+  }
+  .dramaversereply .negIndent {
+    margin-left: -45px;
+    text-indent: 0;
+  }
+
+  .noMarginsRight {
+    margin: 0;
+    text-align: right;
+    text-indent: 0;
+  }
+}
+
+.tei.show_pageNumbering div.dramaversereply span.paragraph_number,
+.tei.show_pageNumbering p.lgIndent span.paragraph_number {
+  margin-left: -80px;
+}
+.tei.show_pageNumbering p.lgIndent.lIndent span.paragraph_number {
+  margin-left: -115px;
+}
+
+page-about {
+  /* Högerställ spalten med verkdel i tabeller över delutgåvorna. */
+  table.editions-list {
+    td:first-child {
+      text-align: right;
+    }
+    td {
+      padding-bottom: 0;
+    }
+    tr:last-child > td {
+      padding-bottom: 0.5em;
+    }
+  }
+
+  /* Bilder i kringtexter */
+  figure {
+    margin: 1.75em 0;
+
+    &.centered {
+      margin: 1.75em auto;
+    }
+
+    figcaption {
+      font-size: 1rem;
+      font-style: italic;
+      margin-top: 0.5em;
+    }
+  }
+
+  /* Tabell utan marginaler i kringtexter */
+  table.no_margins_table {
+    td {
+      padding: 0 0.75em 0 0;
+
+      &:last-child {
+        padding: 0;
+      }
+    }
+  }
+}
+
+page-elastic-search {
+  .info.markdown {
+    /* Sökinstruktionerna i avancerade sökningen */
+    details {
+      padding: .5em .5em 0;
+
+      ul li {
+        line-height: 1.5;
+      }
+
+      ul li + li {
+        padding-top: 0.75em;
+      }
+    }
+
+    summary {
+      font-weight: bold;
+      margin: -.5em -.5em 0;
+      padding: .5em;
+    }
+
+    details[open] {
+      border-bottom: 1px solid #aaa;
+      padding: .5em;
+
+      summary {
+        border-bottom: 1px solid #aaa;
+        margin-bottom: .5em;
+      }
+    }
+
+    .query_example {
+      background-color: #fdfdfd;
+      border: 1px solid var(--button-background-color);
+      border-radius: 3px;
+      color: var(--button-background-color);
+      font-family: monospace;
+      font-size: 0.889em;
+      padding: 0.125em 0.25em;
+    }
+  }
+}
+
+/* Cookiebannern */
+a.cky-banner-element {
+  cursor: pointer;
+  text-decoration: underline;
+}
+#cky-consent,
+#cky-settings-popup {
+	font-family: var(--font-stack-app-base);
+}
+
+/*
+Legacy styles for intro TOC and some headings in actual intro only used
+in the Finnish intros that have not been converted to new coding style yet.
+These styles must be removed when the Finnish intros have been updated.
+*/
+page-introduction #TOC h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+page-introduction #TOC h2.contentSection.smallCaps {
+  font-size: 1.2em;
+  margin-bottom: .6em;
+  margin-top: 1.2em;
+  padding-top: .2em;
+  font-variant: small-caps;
+  font-weight: 600;
+  line-height: 1;
+}
+page-introduction #TOC h5 {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  margin-top: 0.1rem;
+}
+page-introduction #TOC h5.tei.contentSub2 {
+  font-size: 1em;
+  margin-bottom: .4em;
+  margin-top: .1em;
+  font-weight: 600;
+  line-height: 1;
+}
+page-introduction div[data-id="cont_introduction"] h2.tei.section {
+  text-align: left !important;
+  font-weight: normal !important;
+  margin: 1.4em 0 1.3em 0 !important;
+  font-size: 1.4em !important;
+}
+page-introduction div[data-id="cont_introduction"] h3.italics {
+  text-align: left !important;
+  font-style: italic;
+  font-weight: normal !important;
+  margin: 1.3em 0 1.2em 0 !important;
+  font-size: 1.2em !important;
+}
+page-introduction div[data-id="cont_introduction"] h4 {
+  font-style: italic;
+  text-align: left;
+  font-weight: normal;
+  font-size: 1em;
+  margin: 1.1em 0 1em 0;
+}
+/* End of legacy intro styles */

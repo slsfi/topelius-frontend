@@ -1,13 +1,6 @@
-# Frontend App of the SLS Digital Edition Platform
+# Production frontend of Zacharias Topelius Skrifter, topelius.sls.fi
 
-[`digital-edition-frontend-ng`][digital-edition-frontend-ng] is the frontend application of the [SLS][SLS] platform for building digital edition web apps. It supports features typically found in digital scholarly editions, like reading texts, manuscripts, facsimiles and commentaries in parallell views, as well as media collection libraries, indices of named entities and keywords, and an integrated EPUB-viewer.
-
-Internationalization and server-side rendering are supported out of the box, meaning that your web app will be fully indexable by search engines and readable by AI bots. The frontend app utilizes a responsive design and works on both desktop and mobile devices. Many features of the user interface are easily configurable, and theming is straightforward.
-
-Examples of digital editions employing this frontend app include:
-
-- [Zacharias Topelius Skrifter][topelius]
-- [Leo Mechelin – Pro lege][mechelin]
+This branch contains the production frontend app of the digital edition Zacharias Topelius Skrifter, [https://topelius.sls.fi/][topelius]. It is based on [`digital-edition-frontend-ng`][digital-edition-frontend-ng], the frontend app of the [SLS][SLS] platform for building digital edition web apps.
 
 The app is built on [Angular][angular] and uses [Ionic][ionic] web components.
 
@@ -24,21 +17,45 @@ The app is built on [Angular][angular] and uses [Ionic][ionic] web components.
 [Learn about the latest improvements][changelog].
 
 
-## Setting Up a Project
+## Documentation
 
-1. Create a fork of [`digital-edition-frontend-ng`][digital-edition-frontend-ng]. Only include the `main` branch.
+Forthcoming.
 
-2. Rename the default branch of the forked repository `base`, `shared` or something similar.
 
-3. Create a new branch in the forked repository and name it `production`, `prod` or something similar.
+## Update, release, build and deployment workflow
 
-4. Configure your project app by editing `/src/assets/config/config.ts`. Documentation on the configuration options is forthcoming.
+### Update from [base app][digital-edition-frontend-ng]
 
-The `base` branch of the forked repository must **never** be manually modified. It must be kept as a clone of the original ”upstream” `main` branch in [`digital-edition-frontend-ng`][digital-edition-frontend-ng]. When the upstream `main` branch is updated, you can sync the updates to the `base` branch in your forked repository. You can then merge the `base` branch into your `production` branch.
+1. Switch to the `base` branch.
+2. Select `Sync fork` to update the `base` branch with the latest changes from the [original, upstream repository][digital-edition-frontend-ng].
+3. Merge the changes from the `base` branch to this branch and resolve any conflicts.
 
-This workflow enables updates to the app in the original, upstream repository to be easily distributed to forked project repositories.
+It’s recommended not to synchronise unreleased changes from the upstream repository, but to wait for them to be included in a release. The base app uses semantic versioning.
 
-By default, the app has Swedish and Finnish language versions enabled. See the documentation (forthcoming) on how to configure internationalization, customize your app, build it for production and deploy it.
+### Release and build
+
+A new Docker image of this branch is automatically built by GitHub Actions on every new GitHub release in the branch. When creating the new release, name the tag based on the version of the base app and append it with a branch identifier and a rolling number. The rolling number should express the release number for this particular configuration.
+
+For example, if the base app is on version `1.0.2`, the release targets the production branch and this is the first build for this version in the production branch, the release should be tagged `1.0.2-prod.1`. The next release should be tagged `1.0.2-prod.2` (and so on), provided that the base app remains on `1.0.2` and the release targets the production branch. When the semantic version of the base app changes, the rolling release number is reset to 1, for instance: `1.1.0-prod.1`.
+
+**Before** creating a new release, push a commit that updates:
+
+1. the image tag in `compose.yml` to the release tag you are going to use,
+2. the version property in `package.json` (run `npm install` so `package-lock.json` gets updated),
+3. the [changelog][changelog].
+
+### Deployment
+
+SLS Jenkins periodically polls `compose.yml` and deploys the new build to the server on changes to the build image tag. Jenkins can also be manually triggered to deploy a new build.
+
+### Roll-back
+
+In case the server needs to be rolled back to an earlier version, push a commit that updates:
+
+1. the image tag in `compose.yml` to the tag of the selected previous release,
+2. the [changelog][changelog] with information about the roll-back under the ”Unreleased” section.
+
+**Do not** create a new release when rolling back to an earlier version!
 
 
 ## Development Setup
@@ -94,14 +111,9 @@ npm run serve:ssr
 Open your browser on http://localhost:4201/. You need to manually run the build and serve commands again for changes in the source files to take effect.
 
 
-## Earlier version
-
-[`digital-edition-frontend-ng`][digital-edition-frontend-ng] is an updated version of [`digital_edition_web`][digital_edition_web], which is an outdated Ionic 3 / Angular 5 frontend app.
-
-
 ## About the SLS Digital Edition Platform
 
-The platform consists of a [Flask-driven REST API][digital_edition_api], a [backend search app][digital_edition_search] run by the Elastic (ELK) Stack, a [template for a backend files repository][digital_edition_required_files_template] and a [database template][digital_edition_db]. There is also a [tool for creating commentaries][digital_edition_commentary] to texts in [TEI-XML][TEI] format.
+The platform consists of an [Angular frontend app][digital-edition-frontend-ng], a [Flask-driven REST API][digital_edition_api], a [backend search app][digital_edition_search] run by the Elastic (ELK) Stack, a [template for a backend files repository][digital_edition_required_files_template] and a [database template][digital_edition_db]. There is also a [tool for creating commentaries][digital_edition_commentary] to texts in [TEI-XML][TEI] format.
 
 
 [angular]: https://angular.io/
@@ -114,12 +126,10 @@ The platform consists of a [Flask-driven REST API][digital_edition_api], a [back
 [digital_edition_db]: https://github.com/slsfi/digital_edition_db
 [digital_edition_required_files_template]: https://github.com/slsfi/digital_edition_required_files_template
 [digital_edition_search]: https://github.com/slsfi/digital_edition_search
-[digital_edition_web]: https://github.com/slsfi/digital_edition_web
 [git_bash]: https://gitforwindows.org/
 [gith_bash_tutorial]: https://www.atlassian.com/git/tutorials/git-bash
 [github_desktop]: https://desktop.github.com/
 [ionic]: https://ionicframework.com/
-[mechelin]: https://leomechelin.fi/
 [node.js]: https://nodejs.org/
 [npm]: https://www.npmjs.com/get-npm
 [SLS]: https://www.sls.fi/en

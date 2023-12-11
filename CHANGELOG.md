@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Project frontend images and files.
+
+### Changed
+
+- Project config, custom CSS and translations.
+- README with project specific details and information on updating, releasing, building and deploying the app.
+
 ## [1.0.2] – 2023-12-11
 
 ### Changed
