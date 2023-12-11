@@ -7,7 +7,6 @@ import { render } from 'dom-serializer';
 
 import { config } from '@config';
 import { CollectionContentService } from '@services/collection-content.service';
-import { isEmptyObject } from '@utility-functions';
 
 
 @Injectable({
@@ -15,6 +14,7 @@ import { isEmptyObject } from '@utility-functions';
 })
 export class HtmlParserService {
   private apiURL: string = '';
+  private mediaCollectionMappings: any = {};
 
   constructor(
     private collectionContentService: CollectionContentService
@@ -22,25 +22,27 @@ export class HtmlParserService {
     const apiBaseURL = config.app?.backendBaseURL ?? '';
     const projectName = config.app?.projectNameDB ?? '';
     this.apiURL = apiBaseURL + '/' + projectName;
+    this.mediaCollectionMappings = config.collections?.mediaCollectionMappings ?? {};
   }
 
   postprocessReadingText(text: string, collectionId: string) {
     text = text.trim();
+    // Fix image paths
+    text = text.replace(/src="images\//g, 'src="assets/images/');
+    // Map illustration image paths to backend media paths
     text = this.mapIllustrationImagePaths(text, collectionId);
-
     // Add "tei" class to all classlists
     text = text.replace(
       /class="([a-z A-Z _ 0-9]{1,140})"/g,
       'class="tei $1"'
     );
-
     return text;
   }
 
   postprocessManuscriptText(text: string) {
     text = text.trim();
     // Fix image paths
-    text = text.replace(/images\//g, 'assets/images/');
+    text = text.replace(/src="images\//g, 'src="assets/images/');
     // Add "tei" and "teiManuscript" to all classlists
     text = text.replace(
       /class=\"([a-z A-Z _ 0-9]{1,140})\"/g,
@@ -58,9 +60,12 @@ export class HtmlParserService {
           res.content &&
           res.content !== '<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body>File not found</body></html>'
         ) {
+          const _apiURL = this.apiURL;
           const collectionID = String(id).split('_')[0];
           let text = res.content as string;
           text = this.postprocessReadingText(text, collectionID);
+
+          const galleryId = this.mediaCollectionMappings?.[collectionID];
 
           // Parse the read text html to get all illustrations in it using
           // SSR compatible htmlparser2
@@ -74,9 +79,14 @@ export class HtmlParserService {
                   }
                   const image = { src: attributes.src, class: illustrationClass };
                   images.push(image);
-                } else if (attributes.class?.includes('doodle') && attributes['data-id']) {
+                } else if (
+                  attributes.class?.includes('doodle') &&
+                  attributes['data-id'] &&
+                  galleryId
+                ) {
                   const image = {
-                    src: 'assets/images/verk/' + attributes['data-id'].replace('tag_', '') + '.jpg',
+                    src: `${_apiURL}/gallery/get/${galleryId}/`
+                          + attributes['data-id'].replace('tag_', '') + '.jpg',
                     class: 'doodle'
                   };
                   images.push(image);
@@ -96,17 +106,17 @@ export class HtmlParserService {
     );
   }
 
-  mapIllustrationImagePaths(text: string, collectionId: string) {
-    text = text.replace(/images\//g, 'assets/images/');
-    text = text.replace(/assets\/images\/verk\/http/g, 'http');
-
-    const galleries = config.collections?.mediaCollectionMappings ?? {};
-    const galleryId = !isEmptyObject(galleries)
-      ? galleries[collectionId]
-      : undefined;
+  /**
+   * Replace paths in src attribute values for all images with classname
+   * 'est_figure_graphic' in the given text (html as string). The paths
+   * are replaced with the mapped backend path for the collection.
+   * Returns the text with replaced values.
+   */
+  mapIllustrationImagePaths(text: string, collectionID: string): string {
+    const galleryId = this.mediaCollectionMappings?.[collectionID];
     const visibleInlineIllustrations = config.collections?.inlineIllustrations ?? [];
 
-    if (text.includes('est_figure_graphic') || text.includes('assets/images/verk/')) {
+    if (text.includes('est_figure_graphic')) {
       // Use SSR compatible htmlparser2 and related DOM-handling modules
       // (domhandler: https://domhandler.js.org/, domutils: https://domutils.js.org/,
       // dom-serializer: https://github.com/cheeriojs/dom-serializer)
@@ -115,24 +125,33 @@ export class HtmlParserService {
       const parser = new Parser(handler);
       parser.write(text);
       parser.end();
-      if (!visibleInlineIllustrations.includes(Number(collectionId))) {
+
+      // Find all elements with 'est_figure_graphic' classname
+      const m = findAll(
+        el => String(getAttributeValue(el, 'class')).includes('est_figure_graphic'), handler.dom
+      );
+
+      if (!visibleInlineIllustrations.includes(Number(collectionID))) {
         // Hide inline illustrations in the read text
-        const m = findAll(
-          el => String(getAttributeValue(el, 'class')).includes('est_figure_graphic'), handler.dom
-        );
         m.forEach(element => {
           element.attribs.class += ' hide-illustration';
         });
       }
-      const m2 = findAll(
-        el => String(getAttributeValue(el, 'src')).includes('assets/images/verk/'), handler.dom
-      );
-      m2.forEach(element => {
-        element.attribs.src = element.attribs.src.replace(
-          'assets/images/verk/',
-          `${this.apiURL}/gallery/get/${galleryId}/`
-        );
-      });
+
+      // Replace src path with backend base path
+      if (galleryId) {
+        m.forEach(element => {
+          // Only replace relative paths
+          if (element.attribs.src && !(
+            element.attribs.src.indexOf('://') > 0 ||
+            element.attribs.src.indexOf('//') === 0
+          )) {
+            element.attribs.src = `${this.apiURL}/gallery/get/${galleryId}/`
+                                  + element.attribs.src;
+          }
+        });
+      }
+      
       text = render(handler.dom, { decodeEntities: false });
     }
 
@@ -146,8 +165,10 @@ export class HtmlParserService {
     parser.end();
 
     return existsOne(
-      el => (String(getAttributeValue(el, 'class')).includes('est_figure_graphic') &&
-        !String(getAttributeValue(el, 'class')).includes('hide-illustration')), handler.dom
+      el => (
+        String(getAttributeValue(el, 'class')).includes('est_figure_graphic') &&
+        !String(getAttributeValue(el, 'class')).includes('hide-illustration')
+      ), handler.dom
     );
   }
 
@@ -209,6 +230,12 @@ export class HtmlParserService {
       });
     }
     return matches;
+  }
+
+
+  getMappedMediaCollectionURL(collectionID: string): string {
+    const galleryId = this.mediaCollectionMappings?.[collectionID];
+    return galleryId ? `${this.apiURL}/gallery/get/${galleryId}/` : '';
   }
 
 
