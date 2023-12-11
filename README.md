@@ -38,7 +38,7 @@ A new Docker image of this branch is automatically built by GitHub Actions on ev
 
 For example, if the base app is on version `1.0.2`, the release targets the production branch and this is the first build for this version in the production branch, the release should be tagged `1.0.2-prod.1`. The next release should be tagged `1.0.2-prod.2` (and so on), provided that the base app remains on `1.0.2` and the release targets the production branch. When the semantic version of the base app changes, the rolling release number is reset to 1, for instance: `1.1.0-prod.1`.
 
-Before creating a new release, push a commit that updates:
+**Before** creating a new release, push a commit that updates:
 
 1. the image tag in `compose.yml` to the release tag you are going to use,
 2. the version property in `package.json` (run `npm install` so `package-lock.json` gets updated),
