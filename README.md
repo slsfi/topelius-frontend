@@ -1,6 +1,6 @@
-# Production frontend of Zacharias Topelius Skrifter, topelius.sls.fi
+# ’Granska’ frontend of Zacharias Topelius Skrifter, granska-topelius.sls.fi
 
-This branch contains the production frontend app of the digital edition Zacharias Topelius Skrifter, [https://topelius.sls.fi/][topelius]. It is based on [`digital-edition-frontend-ng`][digital-edition-frontend-ng], the frontend app of the [SLS][SLS] platform for building digital edition web apps.
+This branch contains the internal, ”granska” frontend app of the digital edition Zacharias Topelius Skrifter, [https://granska-topelius.sls.fi/][granska-topelius]. It is based on [`digital-edition-frontend-ng`][digital-edition-frontend-ng], the frontend app of the [SLS][SLS] platform for building digital edition web apps.
 
 The app is built on [Angular][angular] and uses [Ionic][ionic] web components.
 
@@ -36,7 +36,7 @@ It’s recommended not to synchronise unreleased changes from the upstream repos
 
 A new Docker image of this branch is automatically built by GitHub Actions on every new GitHub release in the branch. When creating the new release, name the tag based on the version of the base app and append it with a branch identifier and a rolling number. The rolling number should express the release number for this particular configuration.
 
-For example, if the base app is on version `1.0.2`, the release targets the production branch and this is the first build for this version in the production branch, the release should be tagged `1.0.2-prod.1`. The next release should be tagged `1.0.2-prod.2` (and so on), provided that the base app remains on `1.0.2` and the release targets the production branch. When the semantic version of the base app changes, the rolling release number is reset to 1, for instance: `1.1.0-prod.1`.
+For example, if the base app is on version `1.0.2`, the release targets the `granska` branch and this is the first build for this version in the `granska` branch, the release should be tagged `1.0.2-granska.1`. The next release should be tagged `1.0.2-granska.2` (and so on), provided that the base app remains on `1.0.2` and the release targets the `granska` branch. When the semantic version of the base app changes, the rolling release number is reset to 1, for instance: `1.1.0-granska.1`.
 
 **Before** creating a new release, push a commit that updates:
 
@@ -129,6 +129,7 @@ The platform consists of an [Angular frontend app][digital-edition-frontend-ng],
 [git_bash]: https://gitforwindows.org/
 [gith_bash_tutorial]: https://www.atlassian.com/git/tutorials/git-bash
 [github_desktop]: https://desktop.github.com/
+[granska-topelius]: https://granska-topelius.sls.fi/
 [ionic]: https://ionicframework.com/
 [node.js]: https://nodejs.org/
 [npm]: https://www.npmjs.com/get-npm
