@@ -36,7 +36,7 @@ It’s recommended not to synchronise unreleased changes from the upstream repos
 
 A new Docker image of this branch is automatically built by GitHub Actions on every new GitHub release in the branch. When creating the new release, name the tag based on the version of the base app and append it with a branch identifier and a rolling number. The rolling number should express the release number for this particular configuration.
 
-For example, if the base app is on version `1.0.2`, the release targets the production branch and this is the first build for this version in the production branch, the release should be tagged `1.0.2-prod.1`. The next release should be tagged `1.0.2-prod.2` (and so on), provided that the base app remains on `1.0.2` and the release targets the production branch. When the semantic version of the base app changes, the rolling release number is reset to 1, for instance: `1.1.0-prod.1`.
+For example, if the base app is on version `1.0.2`, the release targets the `production` branch and this is the first build for this version in the `production` branch, the release should be tagged `1.0.2-prod.1`. The next release should be tagged `1.0.2-prod.2` (and so on), provided that the base app remains on `1.0.2` and the release targets the `production` branch. When the semantic version of the base app changes, the rolling release number is reset to 1, for instance: `1.1.0-prod.1`.
 
 **Before** creating a new release, push a commit that updates:
 
