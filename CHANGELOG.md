@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## 1.0.2-granska.1 – 2023-12-13
+
 ### Added
 
 - Project frontend images and files.
