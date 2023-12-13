@@ -7,10 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## 1.0.2-production.1 – 2023-12-13
+
 ### Added
 
 - Project frontend images and files.
 - Analytics and cookie banner scripts.
+- GitHub actions build workflow on new release.
 
 ### Changed
 
