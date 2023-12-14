@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [1.0.3-granska.1] – 2023-12-14
+
+### Added
+
+- Background color under banner on home page. ([a811a3c](https://github.com/slsfi/topelius-frontend/commit/a811a3c9d4c689113716f077c8575c0f0e31373a))
+
+### Changed
+
+- Merge upstream, original repository `v1.0.3` into `granska` branch. ([527880b](https://github.com/slsfi/topelius-frontend/commit/527880b0daac5f3bc45fa18e19c309e8fa9b03bf))
+
 ## [1.0.3] – 2023-12-14
 
 ### Added
@@ -82,6 +92,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.0.3-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.0.2-granska.3...1.0.3-granska.1
 [1.0.2-granska.3]: https://github.com/slsfi/topelius-frontend/compare/1.0.2-granska.2...1.0.2-granska.3
 [1.0.2-granska.2]: https://github.com/slsfi/topelius-frontend/compare/1.0.2-granska.1...1.0.2-granska.2
 [1.0.2-granska.1]: https://github.com/slsfi/topelius-frontend/releases/tag/1.0.2-granska.1

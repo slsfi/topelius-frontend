@@ -1,6 +1,6 @@
 {
   "name": "granska-topelius.sls.fi",
-  "version": "1.0.2-granska.3",
+  "version": "1.0.3-granska.1",
   "description": "Angular frontend app for the SLS Digital Edition Platform",
   "homepage": "https://github.com/slsfi/digital-edition-frontend-ng#readme",
   "license": "MIT",
