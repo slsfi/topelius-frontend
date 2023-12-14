@@ -7,13 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [1.0.3-production.1] – 2023-12-14
+
 ### Added
 
-- Background color under banner on home page.
+- Background color under banner on home page. ([f4d35b9](https://github.com/slsfi/topelius-frontend/commit/f4d35b909970436db83f51d0bc7423c47e2656c0))
 
 ### Changed
 
-- Merge upstream, original repository `v1.0.3` into `production` branch.
+- Merge upstream, original repository `v1.0.3` into `production` branch. ([ec8f74b](https://github.com/slsfi/topelius-frontend/commit/ec8f74b99d3ba2fa864a247aa068949e8d77b445))
 
 ## [1.0.3] – 2023-12-14
 
@@ -80,4 +82,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.0.3-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.0.2-production.1...1.0.3-production.1
 [1.0.2-production.1]: https://github.com/slsfi/topelius-frontend/releases/tag/1.0.2-production.1
