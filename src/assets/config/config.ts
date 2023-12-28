@@ -33,6 +33,8 @@ export const config: Config = {
     }
   },
   collections: {
+    addTEIClassNames: true,
+    replaceImageAssetsPaths: true,
     enableLegacyIDs: true,
     enableMathJax: false,
     firstTextItem: {
@@ -283,6 +285,7 @@ export const config: Config = {
     },
     manuscripts: {
       showTitle: true,
+      showNormalizedToggle: true,
       showOpenLegendButton: true
     },
     topMenu: {
