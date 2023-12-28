@@ -1,8 +1,8 @@
 {
   "name": "topelius.sls.fi",
-  "version": "1.1.0",
-  "description": "Angular frontend app for the SLS Digital Edition Platform",
-  "homepage": "https://github.com/slsfi/digital-edition-frontend-ng#readme",
+  "version": "1.1.0-production.1",
+  "description": "Frontend of topelius.sls.fi based on the Angular web app for the SLS Digital Edition Platform",
+  "homepage": "https://github.com/slsfi/topelius-frontend#readme",
   "license": "MIT",
   "private": true,
   "scripts": {
