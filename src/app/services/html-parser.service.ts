@@ -13,8 +13,10 @@ import { CollectionContentService } from '@services/collection-content.service';
   providedIn: 'root',
 })
 export class HtmlParserService {
+  private addTEIClassNames: boolean = true;
   private apiURL: string = '';
   private mediaCollectionMappings: any = {};
+  private replaceImageAssetsPaths: boolean = true;
 
   constructor(
     private collectionContentService: CollectionContentService
@@ -23,31 +25,48 @@ export class HtmlParserService {
     const projectName = config.app?.projectNameDB ?? '';
     this.apiURL = apiBaseURL + '/' + projectName;
     this.mediaCollectionMappings = config.collections?.mediaCollectionMappings ?? {};
+    this.addTEIClassNames = config.collections?.addTEIClassNames ?? true;
+    this.replaceImageAssetsPaths = config.collections?.replaceImageAssetsPaths ?? true;
   }
 
-  postprocessReadingText(text: string, collectionId: string) {
-    text = text.trim();
-    // Fix image paths
-    text = text.replace(/src="images\//g, 'src="assets/images/');
+  postprocessReadingText(text: string, collectionId: string): string {
+    // Fix image paths if config option for this enabled
+    text = this.fixImageAssetsPaths(text);
     // Map illustration image paths to backend media paths
     text = this.mapIllustrationImagePaths(text, collectionId);
-    // Add "tei" class to all classlists
-    text = text.replace(
-      /class="([a-z A-Z _ 0-9]{1,140})"/g,
-      'class="tei $1"'
-    );
+    // Add "tei" class to all classlists if config option for this enabled
+    if (this.addTEIClassNames) {
+      text = text.replace(
+        /class="([a-z A-Z _ 0-9]{1,140})"/g,
+        'class="tei $1"'
+      );
+    }
     return text;
   }
 
-  postprocessManuscriptText(text: string) {
-    text = text.trim();
-    // Fix image paths
-    text = text.replace(/src="images\//g, 'src="assets/images/');
-    // Add "tei" and "teiManuscript" to all classlists
-    text = text.replace(
-      /class=\"([a-z A-Z _ 0-9]{1,140})\"/g,
-      'class=\"teiManuscript tei $1\"'
-    );
+  postprocessManuscriptText(text: string): string {
+    // Fix image paths if config option for this enabled
+    text = this.fixImageAssetsPaths(text);
+    // Add "tei" and "teiManuscript" to all classlists if config option for this enabled
+    if (this.addTEIClassNames) {
+      text = text.replace(
+        /class=\"([a-z A-Z _ 0-9]{1,140})\"/g,
+        'class=\"teiManuscript tei $1\"'
+      );
+    }
+    return text;
+  }
+
+  postprocessVariantText(text: string): string {
+    // Fix image paths if config option for this enabled
+    text = this.fixImageAssetsPaths(text);
+    // Add "tei" and "teiVariant" to all classlists if config option for this enabled
+    if (this.addTEIClassNames) {
+      text = text.replace(
+        /class=\"([a-z A-Z _ 0-9]{1,140})\"/g,
+        'class=\"teiVariant tei $1\"'
+      );
+    }
     return text;
   }
 
@@ -291,6 +310,15 @@ export class HtmlParserService {
     });
 
     return parsed_text;
+  }
+
+  private fixImageAssetsPaths(text: string): string {
+    // Fix image paths if config option for this enabled
+    if (this.replaceImageAssetsPaths) {
+      return text.replace(/src="images\//g, 'src="assets/images/');
+    } else {
+      return text;
+    }
   }
 
 }

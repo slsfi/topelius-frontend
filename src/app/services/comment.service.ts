@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { catchError, map, Observable, of, switchMap, tap } from 'rxjs';
+import { catchError, map, Observable, of } from 'rxjs';
 
 import { config } from '@config';
 
@@ -9,8 +9,10 @@ import { config } from '@config';
   providedIn: 'root',
 })
 export class CommentService {
+  private addTEIClassNames: boolean = true;
   private apiURL: string = '';
   private cachedCollectionComments: Record<string, any> = {};
+  private replaceImageAssetsPaths: boolean = true;
 
   constructor(
     private http: HttpClient
@@ -18,6 +20,8 @@ export class CommentService {
     const apiBaseURL = config.app?.backendBaseURL ?? '';
     const projectName = config.app?.projectNameDB ?? '';
     this.apiURL = apiBaseURL + '/' + projectName;
+    this.addTEIClassNames = config.collections?.addTEIClassNames ?? true;
+    this.replaceImageAssetsPaths = config.collections?.replaceImageAssetsPaths ?? true;
   }
 
   /**
@@ -42,8 +46,7 @@ export class CommentService {
       return this.http.get(endpoint).pipe(
         map((body: any) => {
           if (body?.content) {
-            body = body.content.trim();
-            body = this.postprocessCommentsText(body);
+            body = this.postprocessCommentsText(body.content);
             this.clearCachedCollectionComments();
             this.cachedCollectionComments[textItemID] = body;
           }
@@ -124,13 +127,17 @@ export class CommentService {
   }
 
   private postprocessCommentsText(text: string): string {
-    // Fix image paths
-    text = text.replace(/src="images\//g, 'src="assets/images/');
-    // Add "teiComment" to all classlists
-    text = text.replace(
-      /class=\"([a-z A-Z _ 0-9]{1,140})\"/g,
-      'class=\"teiComment $1\"'
-    );
+    // Fix image paths if config option for this enabled
+    if (this.replaceImageAssetsPaths) {
+      text = text.replace(/src="images\//g, 'src="assets/images/');
+    }
+    // Add "teiComment" to all classlists if config option for this enabled
+    if (this.addTEIClassNames) {
+      text = text.replace(
+        /class=\"([a-z A-Z _ 0-9]{1,140})\"/g,
+        'class=\"teiComment $1\"'
+      );
+    }
     
     // text = text.replace(/(teiComment teiComment )/g, 'teiComment ');
     // text = text.replace(/&lt;/g, '<').replace(/&gt;/g, '>');
