@@ -33,8 +33,8 @@ export const config: Config = {
     }
   },
   collections: {
-    addTEIClassNames: true,
-    replaceImageAssetsPaths: true,
+    addTEIClassNames: false,
+    replaceImageAssetsPaths: false,
     enableLegacyIDs: true,
     enableMathJax: false,
     firstTextItem: {

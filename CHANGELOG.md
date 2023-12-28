@@ -7,15 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
-## [1.0.3-granska.1] – 2023-12-14
-
-### Added
-
-- Background color under banner on home page. ([a811a3c](https://github.com/slsfi/topelius-frontend/commit/a811a3c9d4c689113716f077c8575c0f0e31373a))
+## [1.1.0-granska.1] – 2023-12-28
 
 ### Changed
 
-- Merge upstream, original repository `v1.0.3` into `granska` branch. ([527880b](https://github.com/slsfi/topelius-frontend/commit/527880b0daac5f3bc45fa18e19c309e8fa9b03bf))
+- Merge upstream, original repository `v1.1.0` into `granska` branch. ([35e314e](https://github.com/slsfi/topelius-frontend/commit/35e314e807f96ea2a1fe4606e57e0878c75e9938))
+- Config options `config.collections.addTEIClassNames` and `config.collections.replaceImageAssetsPaths` set to `false`.
 
 ## [1.1.0] – 2023-12-28
 
@@ -38,6 +35,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - Trimming of collection texts fetched from backend. ([990a08c](https://github.com/slsfi/digital-edition-frontend-ng/commit/990a08c54b1207bcd3e290c3307d2d480901b8fe))
+
+## [1.0.3-granska.1] – 2023-12-14
+
+### Added
+
+- Background color under banner on home page. ([a811a3c](https://github.com/slsfi/topelius-frontend/commit/a811a3c9d4c689113716f077c8575c0f0e31373a))
+
+### Changed
+
+- Merge upstream, original repository `v1.0.3` into `granska` branch. ([527880b](https://github.com/slsfi/topelius-frontend/commit/527880b0daac5f3bc45fa18e19c309e8fa9b03bf))
 
 ## [1.0.3] – 2023-12-14
 
@@ -115,6 +122,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.1.0-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.0.3-granska.1...1.1.0-granska.1
 [1.0.3-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.0.2-granska.3...1.0.3-granska.1
 [1.0.2-granska.3]: https://github.com/slsfi/topelius-frontend/compare/1.0.2-granska.2...1.0.2-granska.3
 [1.0.2-granska.2]: https://github.com/slsfi/topelius-frontend/compare/1.0.2-granska.1...1.0.2-granska.2
