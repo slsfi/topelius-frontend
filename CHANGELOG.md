@@ -14,8 +14,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ### Changed
 
-- Optimize font request from Google Fonts for home page site title.
-- Optimize home page banner image (reduce size and quality).
+- Optimize font request from Google Fonts for home page site title. ([2e146a7](https://github.com/slsfi/topelius-frontend/commit/2e146a7f909bac2baac7ec6a233519d701a1e6be))
+- Optimize home page banner image (reduce size and quality). ([002e120](https://github.com/slsfi/topelius-frontend/commit/002e1205c2e6cbce90953b68ffde8145fa874eb4))
 
 
 
@@ -176,6 +176,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.1.1-granska.2]: https://github.com/slsfi/topelius-frontend/compare/1.1.1-granska.1...1.1.1-granska.2
 [1.1.1-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.1.0-granska.1...1.1.1-granska.1
 [1.1.0-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.0.3-granska.1...1.1.0-granska.1
 [1.0.3-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.0.2-granska.3...1.0.3-granska.1
