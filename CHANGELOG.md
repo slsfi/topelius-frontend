@@ -10,6 +10,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
+## [1.1.1-granska.2] – 2024-01-09
+
+### Changed
+
+- Optimize font request from Google Fonts for home page site title.
+
+
+
 ## [1.1.1-granska.1] – 2024-01-09
 
 ### Changed
