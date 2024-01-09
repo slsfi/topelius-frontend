@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Changed
 
 - Optimize font request from Google Fonts for home page site title.
+- Optimize home page banner image (reduce size and quality).
 
 
 
