@@ -10,6 +10,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
+## [1.1.1-granska.1] – 2024-01-09
+
+### Changed
+
+- Merge release `v1.1.1` from upstream, original repository into `granska` branch. ([c74d43b](https://github.com/slsfi/topelius-frontend/commit/c74d43bf6ce0cc40c773c6cd672d884af32c147f))
+
+
+
 ## [1.1.1] – 2024-01-09
 
 ### Added
@@ -159,6 +167,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.1.1-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.1.0-granska.1...1.1.1-granska.1
 [1.1.0-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.0.3-granska.1...1.1.0-granska.1
 [1.0.3-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.0.2-granska.3...1.0.3-granska.1
 [1.0.2-granska.3]: https://github.com/slsfi/topelius-frontend/compare/1.0.2-granska.2...1.0.2-granska.3
