@@ -8,11 +8,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [1.2.0-production.1] – 2024-01-10
+
 ### Changed
 
 - Merge upstream, original repository [`v1.2.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.2.0) into `production` branch. ([4d23e52](https://github.com/slsfi/topelius-frontend/commit/4d23e5289b9a0628a97492fe1465a508df42aed0))
-- Optimize font request from Google Fonts for home page site title.
-- Optimize home page banner image (reduce size and quality).
+- Optimize font request from Google Fonts for home page site title. ([3ae0b7b](https://github.com/slsfi/topelius-frontend/commit/3ae0b7bdb5136abd815cf6f9cd894b3914ec0843))
+- Optimize home page banner image (reduce size and quality). ([42c2b27](https://github.com/slsfi/topelius-frontend/commit/42c2b27df78fe4aaaf1f8218befeac053fd296e7))
 
 
 
@@ -181,6 +185,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.2.0-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.1.0-production.1...1.2.0-production.1
 [1.1.0-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.0.3-production.1...1.1.0-production.1
 [1.0.3-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.0.2-production.1...1.0.3-production.1
 [1.0.2-production.1]: https://github.com/slsfi/topelius-frontend/releases/tag/1.0.2-production.1
