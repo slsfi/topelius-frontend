@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 - Merge upstream, original repository [`v1.2.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.2.0) into `production` branch. ([4d23e52](https://github.com/slsfi/topelius-frontend/commit/4d23e5289b9a0628a97492fe1465a508df42aed0))
 - Optimize font request from Google Fonts for home page site title.
+- Optimize home page banner image (reduce size and quality).
 
 
 
