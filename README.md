@@ -12,6 +12,7 @@ The app is built on [Angular][angular] and uses [Ionic][ionic] web components.
 
 <hr>
 
+
 ## Changelog
 
 [Learn about the latest improvements][changelog].
@@ -19,43 +20,8 @@ The app is built on [Angular][angular] and uses [Ionic][ionic] web components.
 
 ## Documentation
 
-Forthcoming.
-
-
-## Update, release, build and deployment workflow
-
-### Update from [base app][digital-edition-frontend-ng]
-
-1. Switch to the `base` branch.
-2. Select `Sync fork` to update the `base` branch with the latest changes from the [original, upstream repository][digital-edition-frontend-ng].
-3. Merge the changes from the `base` branch to this branch and resolve any conflicts.
-
-It’s recommended not to synchronise unreleased changes from the upstream repository, but to wait for them to be included in a release. The base app uses semantic versioning.
-
-### Release and build
-
-A new Docker image of this branch is automatically built by GitHub Actions on every new GitHub release in the branch. When creating the new release, name the tag based on the version of the base app and append it with a branch identifier and a rolling number. The rolling number should express the release number for this particular configuration.
-
-For example, if the base app is on version `1.0.2`, the release targets the `production` branch and this is the first build for this version in the `production` branch, the release should be tagged `1.0.2-prod.1`. The next release should be tagged `1.0.2-prod.2` (and so on), provided that the base app remains on `1.0.2` and the release targets the `production` branch. When the semantic version of the base app changes, the rolling release number is reset to 1, for instance: `1.1.0-prod.1`.
-
-**Before** creating a new release, push a commit that updates:
-
-1. the image tag in `compose.yml` to the release tag you are going to use,
-2. the version property in `package.json` (run `npm install` so `package-lock.json` gets updated),
-3. the [changelog][changelog].
-
-### Deployment
-
-SLS Jenkins periodically polls `compose.yml` and deploys the new build to the server on changes to the build image tag. Jenkins can also be manually triggered to deploy a new build.
-
-### Roll-back
-
-In case the server needs to be rolled back to an earlier version, push a commit that updates:
-
-1. the image tag in `compose.yml` to the tag of the selected previous release,
-2. the [changelog][changelog] with information about the roll-back under the ”Unreleased” section.
-
-**Do not** create a new release when rolling back to an earlier version!
+- [Updating, building and deployment](docs/DEPLOYMENT.md).
+- [Development notes](docs/DEVELOPMENT.md).
 
 
 ## Development Setup

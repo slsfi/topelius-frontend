@@ -2,10 +2,55 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog](https://keepachangelog.com/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+
 
 ## Unreleased
+
+
+
+## [1.2.0] – 2024-01-10
+
+### Added
+
+- Config option to specify the dimensions of the site logo in the top menu: `config.component.topMenu.siteLogoDimensions` ([7402e28](https://github.com/slsfi/digital-edition-frontend-ng/commit/7402e280cae7c3f6472f7ca7c2a8e57f0795afa1)). The new config option is an object containing nested objects for specifying the height and width of the logo in both desktop and mobile mode. If the option is omitted, it defaults to an empty object, which corresponds to the old behaviour where the height and width attributes of the HTMLImageElement of the logo are not set. Setting the dimensions reduces layout shifts during page loading. Structure of the `siteLogoDimensions` with example values:
+
+```
+siteLogoDimensions: {
+  default: {
+    height: 56,
+    width: 173
+  },
+  mobile: {
+    height: 56,
+    width: 56
+  }
+}
+```
+
+- Documentation on updating, building and deployment, as well as development. ([c329aa8](https://github.com/slsfi/digital-edition-frontend-ng/commit/c329aa8c0eaf357d948cb6ca75b9685b2e4f2134))
+
+### Changed
+
+- Default site logo in top menu changed to optimized PNG image file. Added both black and white versions of SLS’s logo to `assets/images/logo/`. ([9df4bef](https://github.com/slsfi/digital-edition-frontend-ng/commit/9df4bef940ddd66c6087daa93bee9fd166b4e731))
+- Update Angular dev-kit, CLI and SSR to 17.0.9. ([c67b22e](https://github.com/slsfi/digital-edition-frontend-ng/commit/c67b22e89fd459b850c523d679f1653ea5e2eaeb))
+- Update dev-dependency follow-redirects to 1.15.4. ([30355ea](https://github.com/slsfi/digital-edition-frontend-ng/commit/30355ea87e03c68c31df87ed34bb85cadd9e1f35))
+
+
+
+## [1.1.1] – 2024-01-09
+
+### Added
+
+- nginx web server to serve static files in front of Node. This improves performance under load since 1) nginx is more performant than Node’s Express-server, 2) nginx’s performance is not impacted by Node being busy with server-side rendering tasks for dynamic content. ([8952fdc](https://github.com/slsfi/digital-edition-frontend-ng/commit/8952fdcdfece942363b37ef7567da7c344541382) by [@rasek-sls](https://github.com/rasek-sls))
+
+### Changed
+
+- Paths to font files in @font-face rules from absolute to relative. ([2dd2bf3](https://github.com/slsfi/digital-edition-frontend-ng/commit/2dd2bf34d76233f5eafc15e607a491a7800e1a38))
+- Update Ionic to 7.6.3 and Ionicons to 7.2.2. ([f35d148](https://github.com/slsfi/digital-edition-frontend-ng/commit/f35d14831bec9aa7430c43a4bd7854c3f77871b9))
+
+
 
 ## [1.1.0-production.1] – 2023-12-28
 
@@ -13,6 +58,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Merge upstream, original repository `v1.1.0` into `production` branch. ([53696fe](https://github.com/slsfi/topelius-frontend/commit/53696fe8922b31fa75da8f6fc0263c2f292eeac0))
 - Config options `config.collections.addTEIClassNames` and `config.collections.replaceImageAssetsPaths` set to `false`.
+
+
 
 ## [1.1.0] – 2023-12-28
 
@@ -36,6 +83,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Trimming of collection texts fetched from backend. ([990a08c](https://github.com/slsfi/digital-edition-frontend-ng/commit/990a08c54b1207bcd3e290c3307d2d480901b8fe))
 
+
+
 ## [1.0.3-production.1] – 2023-12-14
 
 ### Added
@@ -46,11 +95,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Merge upstream, original repository `v1.0.3` into `production` branch. ([ec8f74b](https://github.com/slsfi/topelius-frontend/commit/ec8f74b99d3ba2fa864a247aa068949e8d77b445))
 
+
+
 ## [1.0.3] – 2023-12-14
 
 ### Added
 
-- GitHub Actions workflow definition for triggering builds on commit push to `main` branch or new release/tag. ([aa32c39](https://github.com/slsfi/digital-edition-frontend-ng/commit/aa32c3941b335219f5e1d68ebbcb9ba6ece21312), [a5b22e7](https://github.com/slsfi/digital-edition-frontend-ng/commit/a5b22e7ca599b27fcf98e2996a8e40b9de801557), [a7be6c3](https://github.com/slsfi/digital-edition-frontend-ng/commit/a7be6c3b71e059af6192d03303064e6c2d219cf2), [00b19e4](https://github.com/slsfi/digital-edition-frontend-ng/commit/00b19e43a3270d83744f84e700e898df51b81c08))
+- GitHub Actions workflow definition for triggering builds on commit push to `main` branch or new release/tag. ([aa32c39](https://github.com/slsfi/digital-edition-frontend-ng/commit/aa32c3941b335219f5e1d68ebbcb9ba6ece21312), [a5b22e7](https://github.com/slsfi/digital-edition-frontend-ng/commit/a5b22e7ca599b27fcf98e2996a8e40b9de801557), [a7be6c3](https://github.com/slsfi/digital-edition-frontend-ng/commit/a7be6c3b71e059af6192d03303064e6c2d219cf2), [00b19e4](https://github.com/slsfi/digital-edition-frontend-ng/commit/00b19e43a3270d83744f84e700e898df51b81c08) by [@rasek-sls](https://github.com/rasek-sls))
 
 ### Changed
 
@@ -61,6 +112,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Remove incomplete regex sanitization of script tags in search query results. The regex sanitization is unnecessary because the query results are anyway parsed as HTML, only text nodes are retained and any `<`, `>` characters are converted to their corresponding HTML entities. ([ce54078](https://github.com/slsfi/digital-edition-frontend-ng/commit/ce540787c76c28554b241f140138531cb08ba6d2))
+
+
 
 ## [1.0.2-production.1] – 2023-12-13
 
@@ -75,6 +128,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Project config, custom CSS and translations.
 - README with project specific details and information on updating, releasing, building and deploying the app.
 
+
+
 ## [1.0.2] – 2023-12-11
 
 ### Changed
@@ -86,6 +141,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - Legacy settings from Angular configuration file. ([fbfc51c](https://github.com/slsfi/digital-edition-frontend-ng/commit/fbfc51c52b3681e265a28db0132b247fb3b136df))
+
+
 
 ## [1.0.1] – 2023-12-07
 
@@ -101,11 +158,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Adjust padding of facsimile page number input elements to accommodate changed spec in Ionic 7.6.0. ([34d1ab0](https://github.com/slsfi/digital-edition-frontend-ng/commit/34d1ab074e03d386f01e6fe00e1fe5e0409dcfb5))
 - Move inline styles for checkbox labels on the elastic-search page to the component SCSS-file. ([8d0a766](https://github.com/slsfi/digital-edition-frontend-ng/commit/8d0a76692396c77715fa570ac32e8f19bfd6b41a))
 
+
+
 ## [1.0.0] – 2023-12-05
 
 - Initial release.
 
-[unreleased]: https://github.com/slsfi/digital-edition-frontend-ng/compare/1.1.0...HEAD
+
+
+[unreleased]: https://github.com/slsfi/digital-edition-frontend-ng/compare/1.2.0...HEAD
+[1.2.0]: https://github.com/slsfi/digital-edition-frontend-ng/compare/1.1.1...1.2.0
+[1.1.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/1.1.0...1.1.1
 [1.1.0]: https://github.com/slsfi/digital-edition-frontend-ng/compare/1.0.3...1.1.0
 [1.0.3]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.2...1.0.3
 [1.0.2]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.1...v1.0.2
