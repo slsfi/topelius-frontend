@@ -10,20 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
-## [1.1.1-granska.2] – 2024-01-09
+## [1.2.0-granska.1] – 2024-01-10
 
 ### Changed
 
-- Optimize font request from Google Fonts for home page site title. ([2e146a7](https://github.com/slsfi/topelius-frontend/commit/2e146a7f909bac2baac7ec6a233519d701a1e6be))
-- Optimize home page banner image (reduce size and quality). ([002e120](https://github.com/slsfi/topelius-frontend/commit/002e1205c2e6cbce90953b68ffde8145fa874eb4))
-
-
-
-## [1.1.1-granska.1] – 2024-01-09
-
-### Changed
-
-- Merge release `v1.1.1` from upstream, original repository into `granska` branch. ([c74d43b](https://github.com/slsfi/topelius-frontend/commit/c74d43bf6ce0cc40c773c6cd672d884af32c147f))
+- Merge release [`v1.2.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.2.0) from upstream, original repository into `granska` branch. ([0736dcc](https://github.com/slsfi/topelius-frontend/commit/0736dcc86eb275312fe4c01286249ae32e306a93))
 
 
 
@@ -53,6 +44,23 @@ siteLogoDimensions: {
 - Default site logo in top menu changed to optimized PNG image file. Added both black and white versions of SLS’s logo to `assets/images/logo/`. ([9df4bef](https://github.com/slsfi/digital-edition-frontend-ng/commit/9df4bef940ddd66c6087daa93bee9fd166b4e731))
 - Update Angular dev-kit, CLI and SSR to 17.0.9. ([c67b22e](https://github.com/slsfi/digital-edition-frontend-ng/commit/c67b22e89fd459b850c523d679f1653ea5e2eaeb))
 - Update dev-dependency follow-redirects to 1.15.4. ([30355ea](https://github.com/slsfi/digital-edition-frontend-ng/commit/30355ea87e03c68c31df87ed34bb85cadd9e1f35))
+
+
+
+## [1.1.1-granska.2] – 2024-01-09
+
+### Changed
+
+- Optimize font request from Google Fonts for home page site title. ([2e146a7](https://github.com/slsfi/topelius-frontend/commit/2e146a7f909bac2baac7ec6a233519d701a1e6be))
+- Optimize home page banner image (reduce size and quality). ([002e120](https://github.com/slsfi/topelius-frontend/commit/002e1205c2e6cbce90953b68ffde8145fa874eb4))
+
+
+
+## [1.1.1-granska.1] – 2024-01-09
+
+### Changed
+
+- Merge release `v1.1.1` from upstream, original repository into `granska` branch. ([c74d43b](https://github.com/slsfi/topelius-frontend/commit/c74d43bf6ce0cc40c773c6cd672d884af32c147f))
 
 
 
