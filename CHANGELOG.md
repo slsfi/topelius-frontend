@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Removed
+
+- Google Analytics GA4 code snippet from `index.html`.
+
 
 
 ## [1.2.1-production.1] – 2024-01-16
