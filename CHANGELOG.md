@@ -10,11 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
-## [1.2.0-granska.1] – 2024-01-10
+## [1.2.1-granska.1] – 2024-01-16
 
 ### Changed
 
-- Merge release [`v1.2.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.2.0) from upstream, original repository into `granska` branch. ([0736dcc](https://github.com/slsfi/topelius-frontend/commit/0736dcc86eb275312fe4c01286249ae32e306a93))
+- Merge release [`v1.2.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.2.1) from upstream, original repository into `granska` branch. ([18db794](https://github.com/slsfi/topelius-frontend/commit/18db794e61507a6c25839bffc782deaf11f83835))
 
 
 
@@ -27,6 +27,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Fixed
 
 - Legacy setup code from Angular 15 to 17 migration. Angular 17 introduced several changes to the `app.module.\*`, `main.server.ts`, `main.ts`, `server.ts` and `tsconfig.\*` files. During the original v15 -> v17 update of the app all of these changes were not implemented. This fix attempts to align the app with the setup of a new modules based Angular 17 app that has SSR and i18n enabled. ([2b7c94d](https://github.com/slsfi/digital-edition-frontend-ng/commit/2b7c94d368adc51de871322ea1e4dcb3df74f5fd))
+
+
+
+## [1.2.0-granska.1] – 2024-01-10
+
+### Changed
+
+- Merge release [`v1.2.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.2.0) from upstream, original repository into `granska` branch. ([0736dcc](https://github.com/slsfi/topelius-frontend/commit/0736dcc86eb275312fe4c01286249ae32e306a93))
 
 
 
