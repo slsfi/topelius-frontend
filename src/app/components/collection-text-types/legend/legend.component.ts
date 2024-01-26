@@ -1,11 +1,10 @@
 import { Component, ElementRef, Inject, Input, LOCALE_ID, NgZone, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 import { AsyncPipe, NgIf } from '@angular/common';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { IonicModule } from '@ionic/angular';
 import { catchError, map, Observable, of } from 'rxjs';
-import { marked } from 'marked';
 
-import { MarkdownContentService } from '@services/markdown-content.service';
+import { TrustHtmlPipe } from '@pipes/trust-html-pipe';
+import { MarkdownService } from '@services/markdown.service';
 import { ScrollService } from '@services/scroll.service';
 import { isBrowser } from '@utility-functions';
 
@@ -15,7 +14,7 @@ import { isBrowser } from '@utility-functions';
   selector: 'text-legend',
   templateUrl: './legend.component.html',
   styleUrls: ['./legend.component.scss'],
-  imports: [AsyncPipe, NgIf, IonicModule]
+  imports: [AsyncPipe, NgIf, IonicModule, TrustHtmlPipe]
 })
 export class LegendComponent implements OnDestroy, OnInit {
   @Input() itemId?: string;
@@ -25,16 +24,15 @@ export class LegendComponent implements OnDestroy, OnInit {
   intervalTimerId: number = 0;
   publicationId: string = '';
   staticMdLegendFolderNumber: string = '13';
-  text$: Observable<SafeHtml>;
+  text$: Observable<string>;
 
   private unlistenClickEvents?: () => void;
 
   constructor(
     private elementRef: ElementRef,
-    private mdContentService: MarkdownContentService,
+    private mdService: MarkdownService,
     private ngZone: NgZone,
     private renderer2: Renderer2,
-    private sanitizer: DomSanitizer,
     private scrollService: ScrollService,
     @Inject(LOCALE_ID) private activeLocale: string
   ) {}
@@ -53,13 +51,13 @@ export class LegendComponent implements OnDestroy, OnInit {
     this.unlistenClickEvents?.();
   }
 
-  getMdContent(fileID: string): Observable<SafeHtml> {
-    return this.mdContentService.getMdContent(fileID).pipe(
+  getMdContent(fileID: string): Observable<string> {
+    return this.mdService.getMdContent(fileID).pipe(
       map((res: any) => {
         if (isBrowser()) {
           this.scrollToInitialTextPosition();
         }
-        return this.sanitizer.bypassSecurityTrustHtml(marked(res.content));
+        return this.mdService.parseMd(res.content);
       }),
       catchError(e => {
         if (fileID.split('-').length > 3) {
