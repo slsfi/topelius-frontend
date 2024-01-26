@@ -8,17 +8,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
-### Removed
-
-- Google Analytics GA4 code snippet from `index.html`.
 
 
-
-## [1.2.1-production.1] – 2024-01-16
+## [1.2.2-production.1] – 2024-01-26
 
 ### Changed
 
-- Merge upstream, original repository [`v1.2.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.2.1) into `production` branch. ([b9b6119](https://github.com/slsfi/topelius-frontend/commit/b9b61192462012cdb2c03106b92bc1ece7c5b2e5))
+- Merge release [`v1.2.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.2.2) from upstream, original repository into `production` branch. ([e2ef019](https://github.com/slsfi/topelius-frontend/commit/e2ef01980753bec761887a56476d020acd6bddbe))
+
+### Removed
+
+- Google Analytics GA4 code snippet from `index.html`. ([6c88fa4](https://github.com/slsfi/topelius-frontend/commit/6c88fa4caff65eb3f6895de4e6c0171c241f3706))
 
 
 
@@ -48,6 +48,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 - Deps: jasmine-spec-reporter from devDependencies. ([a9e0702](https://github.com/slsfi/digital-edition-frontend-ng/commit/a9e070215e15adb5f1078b688ab7bd347d316270))
 - Deps: karma-coverage-istanbul-reporter from devDependencies. ([f27d677](https://github.com/slsfi/digital-edition-frontend-ng/commit/f27d6770d2623acea2f07067952edec0529976cd))
 - Deps: ts-node from devDependencies. ([e55173f](https://github.com/slsfi/digital-edition-frontend-ng/commit/e55173f496db494fcd369b414efa1adf5353beb9))
+
+
+
+## [1.2.1-production.1] – 2024-01-16
+
+### Changed
+
+- Merge upstream, original repository [`v1.2.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.2.1) into `production` branch. ([b9b6119](https://github.com/slsfi/topelius-frontend/commit/b9b61192462012cdb2c03106b92bc1ece7c5b2e5))
 
 
 
@@ -240,6 +248,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.2.2-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.2.1-production.1...1.2.2-production.1
 [1.2.1-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.2.0-production.1...1.2.1-production.1
 [1.2.0-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.1.0-production.1...1.2.0-production.1
 [1.1.0-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.0.3-production.1...1.1.0-production.1
