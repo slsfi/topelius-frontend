@@ -8,10 +8,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [1.3.0-production.1] – 2024-02-16
+
 ### Added
 
-- Sitemap path to robots.txt.
-- Alternate image sources for the home page banner image.
+- Sitemap path to robots.txt. ([fac9033](https://github.com/slsfi/topelius-frontend/commit/fac9033c1cef4733a40fb953cf9d2fbfed77ce63))
+- Alternate image sources for the home page banner image. ([20c4f8f](https://github.com/slsfi/topelius-frontend/commit/20c4f8ff5931dda573b69826ab9916690615a230))
+
+### Changed
+
+- - Merge release [`v1.3.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.0) from upstream, original repository into `production` branch. ([f4b1282](https://github.com/slsfi/topelius-frontend/commit/f4b1282591d5f5e11e9c348c5600c54b4cd6f1ad))
 
 
 
@@ -308,6 +316,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.3.0-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.2.3-production.1...1.3.0-production.1
 [1.2.3-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.2.2-production.1...1.2.3-production.1
 [1.2.2-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.2.1-production.1...1.2.2-production.1
 [1.2.1-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.2.0-production.1...1.2.1-production.1
