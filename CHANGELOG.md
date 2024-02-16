@@ -10,11 +10,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
-## [1.2.3-granska.1] – 2024-01-31
+## [1.3.0-granska.1] – 2024-02-16
+
+### Added
+
+- Alternate image sources for the home page banner image.
 
 ### Changed
 
-- Merge release [`v1.2.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.2.3) from upstream, original repository into `granska` branch. ([1d35457](https://github.com/slsfi/topelius-frontend/commit/1d35457b4cede12429b7052510cf8e527c938092))
+- Merge release [`v1.3.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.0) from upstream, original repository into `granska` branch. ([b56d1de](https://github.com/slsfi/topelius-frontend/commit/b56d1de91b7e78fb3d9eb9bdee49e3601359232a))
 
 
 
@@ -52,6 +56,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Removed
 
 - Deps: `xliff`. ([7475e83](https://github.com/slsfi/digital-edition-frontend-ng/commit/7475e832b944e6059a4f7b062ca3fe6af98dcd73))
+
+
+
+## [1.2.3-granska.1] – 2024-01-31
+
+### Changed
+
+- Merge release [`v1.2.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.2.3) from upstream, original repository into `granska` branch. ([1d35457](https://github.com/slsfi/topelius-frontend/commit/1d35457b4cede12429b7052510cf8e527c938092))
 
 
 
@@ -328,6 +340,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.3.0-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.2.3-granska.1...1.3.0-granska.1
 [1.2.3-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.2.2-granska.1...1.2.3-granska.1
 [1.2.2-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.2.1-granska.1...1.2.2-granska.1
 [1.2.1-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.2.0-granska.1...1.2.1-granska.1
