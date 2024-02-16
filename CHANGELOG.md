@@ -8,13 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Added
 
-
-## [1.2.3-production.1] – 2024-01-31
-
-### Changed
-
-- Merge release [`v1.2.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.2.3) from upstream, original repository into `production` branch. ([cdeb483](https://github.com/slsfi/topelius-frontend/commit/cdeb4832a5b4a9526a31e11e514fa1193879c1a3))
+- Sitemap path to robots.txt.
 
 
 
@@ -52,6 +48,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Removed
 
 - Deps: `xliff`. ([7475e83](https://github.com/slsfi/digital-edition-frontend-ng/commit/7475e832b944e6059a4f7b062ca3fe6af98dcd73))
+
+
+
+## [1.2.3-production.1] – 2024-01-31
+
+### Changed
+
+- Merge release [`v1.2.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.2.3) from upstream, original repository into `production` branch. ([cdeb483](https://github.com/slsfi/topelius-frontend/commit/cdeb4832a5b4a9526a31e11e514fa1193879c1a3))
 
 
 
