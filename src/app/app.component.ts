@@ -3,6 +3,7 @@ import { NavigationEnd, Params, PRIMARY_OUTLET, Router, UrlSegment, UrlTree } fr
 import { filter, Subscription } from 'rxjs';
 
 import { config } from '@config';
+import { CollectionTableOfContentsService } from '@services/collection-toc.service';
 import { DocumentHeadService } from '@services/document-head.service';
 import { PlatformService } from '@services/platform.service';
 import { isBrowser } from '@utility-functions';
@@ -16,11 +17,12 @@ import { isBrowser } from '@utility-functions';
 export class AppComponent implements OnDestroy, OnInit {
   appIsStarting: boolean = true;
   collectionID: string = '';
-  collectionSideMenuInitialUrlSegments: UrlSegment[];
-  collectionSideMenuInitialQueryParams: Params;
+  collSideMenuUrlSegments: UrlSegment[];
+  collSideMenuQueryParams: Params;
   currentRouterUrl: string = '';
   currentUrlSegments: UrlSegment[] = [];
   enableRouterLoadingBar: boolean = false;
+  enableCollectionSideMenuSSR: boolean = false;
   loadingBarHidden: boolean = false;
   mobileMode: boolean = true;
   mountMainSideMenu: boolean = false;
@@ -32,8 +34,10 @@ export class AppComponent implements OnDestroy, OnInit {
   constructor(
     private headService: DocumentHeadService,
     private platformService: PlatformService,
-    private router: Router
+    private router: Router,
+    private tocService: CollectionTableOfContentsService
   ) {
+    this.enableCollectionSideMenuSSR = config.app?.ssr?.collectionSideMenu ?? false;
     this.enableRouterLoadingBar = config.app?.enableRouterLoadingBar ?? false;
   }
 
@@ -58,9 +62,15 @@ export class AppComponent implements OnDestroy, OnInit {
       // Check if a collection page in order to show collection side
       // menu instead of main side menu.
       if (this.currentUrlSegments?.[0]?.path === 'collection') {
-        this.collectionID = this.currentUrlSegments[1]?.path || '';
-        this.collectionSideMenuInitialUrlSegments = this.currentUrlSegments;
-        this.collectionSideMenuInitialQueryParams = currentUrlTree?.queryParams;
+        const newCollectionID = this.currentUrlSegments[1]?.path || '';
+        
+        if (this.collectionID !== newCollectionID) {
+          this.collectionID = newCollectionID;
+          this.tocService.setCurrentCollectionToc(this.collectionID);
+        }
+
+        this.collSideMenuUrlSegments = this.currentUrlSegments;
+        this.collSideMenuQueryParams = currentUrlTree?.queryParams;
         this.showCollectionSideMenu = true;
       } else {
         // If the app is started on a collection-page the main side menu
@@ -71,6 +81,10 @@ export class AppComponent implements OnDestroy, OnInit {
         // displayed.
         this.mountMainSideMenu = true;
         this.showCollectionSideMenu = false;
+        // Clear the collection TOC loaded in the collection side menu
+        // to prevent the previous TOC from flashing in view when
+        // entering another collection.
+        this.tocService.setCurrentCollectionToc('');
       }
 
       // Hide side menu if:

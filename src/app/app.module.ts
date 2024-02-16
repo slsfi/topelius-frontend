@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CollectionSideMenuComponent } from '@components/menus/collection-side/collection-side-menu.component';
 import { MainSideMenuComponent } from '@components/menus/main-side/main-side-menu.component';
+import { StaticHtmlComponent } from '@components/static-html/static-html.component';
 import { TopMenuComponent } from '@components/menus/top/top-menu.component';
 
 
@@ -18,16 +19,14 @@ import { TopMenuComponent } from '@components/menus/top/top-menu.component';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(
-      {
-        mode: 'md',
-        backButtonText: '',
-      }
-    ),
+    IonicModule.forRoot({
+      mode: 'md'
+    }),
     AppRoutingModule,
     CommonModule,
     CollectionSideMenuComponent,
     MainSideMenuComponent,
+    StaticHtmlComponent,
     TopMenuComponent
   ],
   providers: [

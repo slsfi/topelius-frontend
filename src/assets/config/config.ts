@@ -30,6 +30,13 @@ export const config: Config = {
           URL: "assets/images/open-graph/topelius_nyblin_1881_museovirasto_HK19621012-15.jpg"
         }
       }
+    },
+    prebuild: {
+      sitemap: true,
+      staticCollectionMenus: true
+    },
+    ssr: {
+      collectionSideMenu: false
     }
   },
   collections: {
@@ -156,7 +163,12 @@ export const config: Config = {
           sv: "Porträtt av Zacharias Topelius",
           fi: "Zacharias Topeliuksen muotokuva"
         },
+        intrinsicSize: {
+          height: null,
+          width: null
+        },
         orientationPortrait: true,
+        alternateSources: [],
         URL: "assets/images/home-page-banner-portrait.jpg"
       },
       portraitOrientationSettings: {

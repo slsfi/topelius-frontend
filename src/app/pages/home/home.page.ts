@@ -17,8 +17,11 @@ export class HomePage implements OnInit {
   imageAltText: string = '';
   imageOnRight: boolean = false;
   imageOrientationPortrait: boolean = false;
+  imageSources: any[] = [];
   imageURL: string = '';
   imageURLStyle: string = '';
+  imageHeight: number | null = null;
+  imageWidth: number | null = null;
   portraitImageObjectPosition: string | null = null;
   searchQuery: string = '';
   showContentGrid: boolean = false;
@@ -41,6 +44,9 @@ export class HomePage implements OnInit {
     this.showFooter = config.page?.home?.showFooter ?? false;
     this.showSearchbar = config.page?.home?.showSearchbar ?? false;
     this.titleOnImage = config.page?.home?.portraitOrientationSettings?.siteTitleOnImageOnSmallScreens ?? false;
+    this.imageHeight = config.page?.home?.bannerImage?.intrinsicSize?.height ?? null;
+    this.imageWidth = config.page?.home?.bannerImage?.intrinsicSize?.width ?? null;
+    this.imageSources = config.page?.home?.bannerImage?.alternateSources ?? [];
 
     if (config.page?.home?.portraitOrientationSettings?.imagePlacement?.squareCroppedVerticalOffset) {
       this.portraitImageObjectPosition = '50% ' + config.page?.home?.portraitOrientationSettings?.imagePlacement?.squareCroppedVerticalOffset;
