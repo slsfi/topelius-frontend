@@ -164,11 +164,22 @@ export const config: Config = {
           fi: "Zacharias Topeliuksen muotokuva"
         },
         intrinsicSize: {
-          height: null,
-          width: null
+          height: 1408,
+          width: 1056
         },
         orientationPortrait: true,
-        alternateSources: [],
+        alternateSources: [
+          {
+            srcset: "assets/images/home-page-banner-portrait_396w.avif 396w, assets/images/home-page-banner-portrait_528w.avif 528w, assets/images/home-page-banner-portrait_704w.avif 704w, assets/images/home-page-banner-portrait_900w.avif 900w, assets/images/home-page-banner-portrait.avif 1056w",
+            sizes: "(max-width: 900px) 100vw, 27.5vw",
+            type: "image/avif"
+          },
+          {
+            srcset: "assets/images/home-page-banner-portrait_396w.jpg 396w, assets/images/home-page-banner-portrait_528w.jpg 528w, assets/images/home-page-banner-portrait_704w.jpg 704w, assets/images/home-page-banner-portrait_900w.jpg 900w, assets/images/home-page-banner-portrait.jpg 1056w",
+            sizes: "(max-width: 900px) 100vw, 27.5vw",
+            type: "image/jpeg"
+          }
+        ],
         URL: "assets/images/home-page-banner-portrait.jpg"
       },
       portraitOrientationSettings: {
