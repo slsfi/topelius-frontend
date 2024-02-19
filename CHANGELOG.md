@@ -10,6 +10,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
+## [1.3.1-production.1] – 2024-02-19
+
+### Changed
+
+- Merge release [`v1.3.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.1) from upstream, original repository into `production` branch. ([fe500d7](https://github.com/slsfi/topelius-frontend/commit/fe500d7d4048d60f7c8d5beadef720251ad186b3))
+
+
+
+## [1.3.1] – 2024-02-19
+
+### Fixes
+
+- Memory leak related to BehaviorSubject-subscription in the download-texts modal. Also, as a precation, unsubscribe from all route subscriptions on component destruction. ([b32dfe4](https://github.com/slsfi/digital-edition-frontend-ng/commit/b32dfe4e74393ecb64aad4f83d415fa60f2f37bb))
+
+
+
 ## [1.3.0-production.1] – 2024-02-16
 
 ### Added
@@ -19,15 +35,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ### Changed
 
-- - Merge release [`v1.3.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.0) from upstream, original repository into `production` branch. ([f4b1282](https://github.com/slsfi/topelius-frontend/commit/f4b1282591d5f5e11e9c348c5600c54b4cd6f1ad))
-
-
-
-## [1.3.1] – 2024-02-19
-
-### Fixes
-
-- Memory leak related to BehaviorSubject-subscription in the download-texts modal. Also, as a precation, unsubscribe from all route subscriptions on component destruction. ([b32dfe4](https://github.com/slsfi/digital-edition-frontend-ng/commit/b32dfe4e74393ecb64aad4f83d415fa60f2f37bb))
+- Merge release [`v1.3.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.0) from upstream, original repository into `production` branch. ([f4b1282](https://github.com/slsfi/topelius-frontend/commit/f4b1282591d5f5e11e9c348c5600c54b4cd6f1ad))
 
 
 
@@ -325,6 +333,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.3.1-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.3.0-production.1...1.3.1-production.1
 [1.3.0-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.2.3-production.1...1.3.0-production.1
 [1.2.3-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.2.2-production.1...1.2.3-production.1
 [1.2.2-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.2.1-production.1...1.2.2-production.1
