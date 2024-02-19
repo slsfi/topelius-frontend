@@ -10,6 +10,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
+## [1.3.1-granska.1] – 2024-02-19
+
+### Changed
+
+- Merge release [`v1.3.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.1) from upstream, original repository into `granska` branch. ([645ecc5](https://github.com/slsfi/topelius-frontend/commit/645ecc57e2a96518e583856b82cacaf8002b080e))
+
+
+
+## [1.3.1] – 2024-02-19
+
+### Fixes
+
+- Memory leak related to BehaviorSubject-subscription in the download-texts modal. Also, as a precation, unsubscribe from all route subscriptions on component destruction. ([b32dfe4](https://github.com/slsfi/digital-edition-frontend-ng/commit/b32dfe4e74393ecb64aad4f83d415fa60f2f37bb))
+
+
+
 ## [1.3.0-granska.1] – 2024-02-16
 
 ### Added
@@ -19,14 +35,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Changed
 
 - Merge release [`v1.3.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.0) from upstream, original repository into `granska` branch. ([b56d1de](https://github.com/slsfi/topelius-frontend/commit/b56d1de91b7e78fb3d9eb9bdee49e3601359232a))
-
-
-
-## [1.3.1] – 2024-02-19
-
-### Fixes
-
-- Memory leak related to BehaviorSubject-subscription in the download-texts modal. Also, as a precation, unsubscribe from all route subscriptions on component destruction. ([b32dfe4](https://github.com/slsfi/digital-edition-frontend-ng/commit/b32dfe4e74393ecb64aad4f83d415fa60f2f37bb))
 
 
 
@@ -349,6 +357,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.3.1-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.3.0-granska.1...1.3.1-granska.1
 [1.3.0-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.2.3-granska.1...1.3.0-granska.1
 [1.2.3-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.2.2-granska.1...1.2.3-granska.1
 [1.2.2-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.2.1-granska.1...1.2.2-granska.1
