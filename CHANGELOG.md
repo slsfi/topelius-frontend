@@ -10,12 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
-## [1.3.1-granska.1] – 2024-02-19
+## [1.3.2-granska.1] – 2024-03-01
 
 ### Changed
 
-- Merge release [`v1.3.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.1) from upstream, original repository into `granska` branch. ([645ecc5](https://github.com/slsfi/topelius-frontend/commit/645ecc57e2a96518e583856b82cacaf8002b080e))
-
+- Merge release [`v1.3.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.2) from upstream, original repository into `granska` branch. ([0bc930d](https://github.com/slsfi/topelius-frontend/commit/0bc930da299eac22f0a52a4a1894cfa2f118e973))
 
 
 ## [1.3.2] – 2024-02-29
@@ -33,6 +32,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Fixed
 
 - Missing collection menu when navigating backward using browser history if collection changes. ([11687bb](https://github.com/slsfi/digital-edition-frontend-ng/commit/11687bbf6d4859685550b75de7df3857fab963c1))
+
+
+
+## [1.3.1-granska.1] – 2024-02-19
+
+### Changed
+
+- Merge release [`v1.3.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.1) from upstream, original repository into `granska` branch. ([645ecc5](https://github.com/slsfi/topelius-frontend/commit/645ecc57e2a96518e583856b82cacaf8002b080e))
 
 
 
@@ -376,6 +383,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.3.2-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.3.1-granska.1...1.3.2-granska.1
 [1.3.1-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.3.0-granska.1...1.3.1-granska.1
 [1.3.0-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.2.3-granska.1...1.3.0-granska.1
 [1.2.3-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.2.2-granska.1...1.2.3-granska.1
