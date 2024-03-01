@@ -8,13 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
-
-
-## [1.3.1-production.1] – 2024-02-19
-
 ### Changed
 
-- Merge release [`v1.3.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.1) from upstream, original repository into `production` branch. ([fe500d7](https://github.com/slsfi/topelius-frontend/commit/fe500d7d4048d60f7c8d5beadef720251ad186b3))
+- Set crawl delay rule in robots.txt.
 
 
 
@@ -33,6 +29,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Fixed
 
 - Missing collection menu when navigating backward using browser history if collection changes. ([11687bb](https://github.com/slsfi/digital-edition-frontend-ng/commit/11687bbf6d4859685550b75de7df3857fab963c1))
+
+
+
+## [1.3.1-production.1] – 2024-02-19
+
+### Changed
+
+- Merge release [`v1.3.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.1) from upstream, original repository into `production` branch. ([fe500d7](https://github.com/slsfi/topelius-frontend/commit/fe500d7d4048d60f7c8d5beadef720251ad186b3))
 
 
 
