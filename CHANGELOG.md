@@ -8,9 +8,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [1.3.2-production.1] – 2024-03-01
+
+### Added
+
+- Crawl delay rule in `robots.txt`. ([0413ae6](https://github.com/slsfi/topelius-frontend/commit/0413ae6bfdce964058415343a31ba1d68951561a))
+
 ### Changed
 
-- Set crawl delay rule in robots.txt.
+- Merge release [`v1.3.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.2) from upstream, original repository into `production` branch. ([54953b9](https://github.com/slsfi/topelius-frontend/commit/54953b9397c70778994fdf93de85a02161c8a753))
 
 
 
@@ -356,6 +364,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.3.2-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.3.1-production.1...1.3.2-production.1
 [1.3.1-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.3.0-production.1...1.3.1-production.1
 [1.3.0-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.2.3-production.1...1.3.0-production.1
 [1.2.3-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.2.2-production.1...1.2.3-production.1
