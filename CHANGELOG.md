@@ -10,6 +10,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
+## [1.3.3-granska.1] – 2024-04-04
+
+### Changed
+
+- Merge release [`v1.3.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.3) from upstream, original repository into `granska` branch. ([f959a18](https://github.com/slsfi/topelius-frontend/commit/f959a18586bec0dc2517501dfdcd3aa8dacd5ef8))
+
+
+
 ## [1.3.3] – 2024-04-04
 
 ### Added
@@ -416,6 +424,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.3.3-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.3.2-granska.1...1.3.3-granska.1
 [1.3.2-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.3.1-granska.1...1.3.2-granska.1
 [1.3.1-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.3.0-granska.1...1.3.1-granska.1
 [1.3.0-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.2.3-granska.1...1.3.0-granska.1
