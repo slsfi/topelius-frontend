@@ -10,15 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
-## [1.3.2-production.1] – 2024-03-01
-
-### Added
-
-- Crawl delay rule in `robots.txt`. ([0413ae6](https://github.com/slsfi/topelius-frontend/commit/0413ae6bfdce964058415343a31ba1d68951561a))
+## [1.3.3-production.1] – 2024-04-04
 
 ### Changed
 
-- Merge release [`v1.3.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.2) from upstream, original repository into `production` branch. ([54953b9](https://github.com/slsfi/topelius-frontend/commit/54953b9397c70778994fdf93de85a02161c8a753))
+- Merge release [`v1.3.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.3) from upstream, original repository into `production` branch. ([9dfad5a](https://github.com/slsfi/topelius-frontend/commit/9dfad5a0d1fc410c217c39cb52e76874cdbec15d))
 
 
 
@@ -50,6 +46,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 - Link-elements added to the DOM using a custom renderer in the document head service are cleaned up when the service is destroyed. This fixes a potential memory leak in the SSR-app. ([736195e](https://github.com/slsfi/digital-edition-frontend-ng/commit/736195e4e6097c24a6452ad5294ad29ea6e90293))
 - Return values of the RxJS `catchError` function. ([fb862c2](https://github.com/slsfi/digital-edition-frontend-ng/commit/fb862c2e801a9f232d3fc92d704e9bebc5bd632b))
 - Ensure cleanup of event listeners in the draggable-image directive. ([0b2f871](https://github.com/slsfi/digital-edition-frontend-ng/commit/0b2f871a737ec2daec91a08e3021289782f9dd41))
+
+
+
+## [1.3.2-production.1] – 2024-03-01
+
+### Added
+
+- Crawl delay rule in `robots.txt`. ([0413ae6](https://github.com/slsfi/topelius-frontend/commit/0413ae6bfdce964058415343a31ba1d68951561a))
+
+### Changed
+
+- Merge release [`v1.3.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.2) from upstream, original repository into `production` branch. ([54953b9](https://github.com/slsfi/topelius-frontend/commit/54953b9397c70778994fdf93de85a02161c8a753))
 
 
 
@@ -396,6 +404,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.3.3-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.3.2-production.1...1.3.3-production.1
 [1.3.2-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.3.1-production.1...1.3.2-production.1
 [1.3.1-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.3.0-production.1...1.3.1-production.1
 [1.3.0-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.2.3-production.1...1.3.0-production.1
