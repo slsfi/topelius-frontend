@@ -10,11 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
-## [1.3.3-granska.1] – 2024-04-04
+## [1.3.4-granska.1] – 2024-05-07
 
 ### Changed
 
-- Merge release [`v1.3.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.3) from upstream, original repository into `granska` branch. ([f959a18](https://github.com/slsfi/topelius-frontend/commit/f959a18586bec0dc2517501dfdcd3aa8dacd5ef8))
+- Merge release [`v1.3.4`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.4) from upstream, original repository into `granska` branch. ([39ae938](https://github.com/slsfi/topelius-frontend/commit/39ae93880532636e70cdf11e1a15127ec4c05acc))
 
 
 
@@ -31,6 +31,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 - Deps: update `@types/node` to 20.12.10. ([524024e](https://github.com/slsfi/digital-edition-frontend-ng/commit/524024e1c3848e76a81da157d5f4a512aae93f3b), [0508562](https://github.com/slsfi/digital-edition-frontend-ng/commit/0508562d47188e0d77115323d9c1bb7c926298b3))
 - Deps: update `typescript` to 5.4.5. ([4a8c95f](https://github.com/slsfi/digital-edition-frontend-ng/commit/4a8c95fd55f8ca549e1a13096052daf9d57d6caf))
 - Update `nginx` to 1.26.0. ([4e3bdfa](https://github.com/slsfi/digital-edition-frontend-ng/commit/4e3bdfabaee74d63bcde720d60f823e9d8f1000f))
+
+
+
+## [1.3.3-granska.1] – 2024-04-04
+
+### Changed
+
+- Merge release [`v1.3.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.3) from upstream, original repository into `granska` branch. ([f959a18](https://github.com/slsfi/topelius-frontend/commit/f959a18586bec0dc2517501dfdcd3aa8dacd5ef8))
 
 
 
@@ -441,6 +449,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.3.4-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.3.3-granska.1...1.3.4-granska.1
 [1.3.3-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.3.2-granska.1...1.3.3-granska.1
 [1.3.2-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.3.1-granska.1...1.3.2-granska.1
 [1.3.1-granska.1]: https://github.com/slsfi/topelius-frontend/compare/1.3.0-granska.1...1.3.1-granska.1
