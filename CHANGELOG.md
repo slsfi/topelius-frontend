@@ -10,11 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
-## [1.4.3-production.1] – 2024-08-01
+## [1.4.4-production.1] – 2024-08-12
 
 ### Changed
 
-- Merge release [`v1.4.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.4.3) from upstream, original repository into `production` branch. ([71237a7](https://github.com/slsfi/topelius-frontend/commit/71237a71272c1f8025b80e308e37e796c9129d36))
+- Merge release [`v1.4.4`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.4.4) from upstream, original repository into `production` branch. ([887d723](https://github.com/slsfi/topelius-frontend/commit/887d723871a64ae8fee1d1218efc605e590c0ce4))
 
 
 
@@ -40,6 +40,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 - Add missing `ngFor` import to `pdf-viewer.component`. ([b751172](https://github.com/slsfi/digital-edition-frontend-ng/commit/b75117289732e5f4b00b4ac4d885b3f420498183))
 - Filter type headings should not be visible in index filter modal when no filter options available. ([ff975df](https://github.com/slsfi/digital-edition-frontend-ng/commit/ff975dfacc50f3f71c2295b7553fdbcfa9f05b3e))
 - Home page banner image `min-height` set to `200px` in landscape image mode. This fixes an issue where the banner image height is too small on mobile phones in landscape orientation. You should adjust the `min-height` for the banner image in your project in `custom.scss` if necessary. You can use the selector `page-home div.banner.banner`. ([d5b717d](https://github.com/slsfi/digital-edition-frontend-ng/commit/d5b717d22d0a2e57325f8090b10006248627965b))
+
+
+
+## [1.4.3-production.1] – 2024-08-01
+
+### Changed
+
+- Merge release [`v1.4.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.4.3) from upstream, original repository into `production` branch. ([71237a7](https://github.com/slsfi/topelius-frontend/commit/71237a71272c1f8025b80e308e37e796c9129d36))
 
 
 
@@ -536,6 +544,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.4.4-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.4.3-production.1...1.4.4-production.1
 [1.4.3-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.3.4-production.1...1.4.3-production.1
 [1.3.4-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.3.3-production.1...1.3.4-production.1
 [1.3.3-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.3.2-production.1...1.3.3-production.1
