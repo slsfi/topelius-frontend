@@ -10,11 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
-## [1.4.4-production.1] – 2024-08-12
+## [1.5.2-production.1] – 2024-08-30
 
 ### Changed
 
-- Merge release [`v1.4.4`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.4.4) from upstream, original repository into `production` branch. ([887d723](https://github.com/slsfi/topelius-frontend/commit/887d723871a64ae8fee1d1218efc605e590c0ce4))
+- Merge release [`v1.5.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.2) from upstream, original repository into `production` branch. ([b83f31e](https://github.com/slsfi/topelius-frontend/commit/b83f31e91973579587050cd2b8a2be7d6ba43eaf))
 
 
 
@@ -77,6 +77,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 - `index.html`: deprecated and outdated meta tags. ([2bf9c2e](https://github.com/slsfi/digital-edition-frontend-ng/commit/2bf9c2ee1061eda3c8be9d285d9c216a7a26ba49))
 - `compose.yml`: testa-vonwright.sls.fi from extra hosts. ([5bb6ff8](https://github.com/slsfi/digital-edition-frontend-ng/commit/5bb6ff836fc58fe1aa5545226e1816b44ebe88e8))
+
+
+
+## [1.4.4-production.1] – 2024-08-12
+
+### Changed
+
+- Merge release [`v1.4.4`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.4.4) from upstream, original repository into `production` branch. ([887d723](https://github.com/slsfi/topelius-frontend/commit/887d723871a64ae8fee1d1218efc605e590c0ce4))
 
 
 
@@ -609,6 +617,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.5.2-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.4.4-production.1...1.5.2-production.1
 [1.4.4-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.4.3-production.1...1.4.4-production.1
 [1.4.3-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.3.4-production.1...1.4.3-production.1
 [1.3.4-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.3.3-production.1...1.3.4-production.1
