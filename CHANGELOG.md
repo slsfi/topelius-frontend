@@ -10,11 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
-## [1.5.2-production.1] – 2024-08-30
+## [1.5.3-production.1] – 2024-10-08
 
 ### Changed
 
-- Merge release [`v1.5.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.2) from upstream, original repository into `production` branch. ([b83f31e](https://github.com/slsfi/topelius-frontend/commit/b83f31e91973579587050cd2b8a2be7d6ba43eaf))
+- Merge release [`v1.5.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.3) from upstream, original repository into `production` branch. ([97039a8](https://github.com/slsfi/topelius-frontend/commit/97039a893ca3eeebfb2aa897e1daa2d6559588fa))
 
 
 
@@ -28,6 +28,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 - Deps (dev): update `@types/node` to 20.16.9. ([1ec69f7](https://github.com/slsfi/digital-edition-frontend-ng/commit/1ec69f7261474461b673d54fc6ea3f7b7c2f3ae4))
 - Deps (dev): update `jasmine-core` to 5.3.0. ([7d72e39](https://github.com/slsfi/digital-edition-frontend-ng/commit/7d72e39287ed5a3af06f87eecf8e76069c49826d))
 - Deps (transitive): update `browser-sync` to 3.0.3 and `serve-static` to 1.16.2. ([04a421d](https://github.com/slsfi/digital-edition-frontend-ng/commit/04a421dad2ac9239921712bed85ac988b68f9bf1))
+
+
+
+## [1.5.2-production.1] – 2024-08-30
+
+### Changed
+
+- Merge release [`v1.5.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.2) from upstream, original repository into `production` branch. ([b83f31e](https://github.com/slsfi/topelius-frontend/commit/b83f31e91973579587050cd2b8a2be7d6ba43eaf))
 
 
 
@@ -631,6 +639,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.5.3-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.5.2-production.1...1.5.3-production.1
 [1.5.2-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.4.4-production.1...1.5.2-production.1
 [1.4.4-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.4.3-production.1...1.4.4-production.1
 [1.4.3-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.3.4-production.1...1.4.3-production.1
