@@ -10,11 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
-## [1.5.6-production.1] – 2025-02-03
+## [1.5.7-production.1] – 2025-03-17
 
 ### Changed
 
-- Merge release [`v1.5.6`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.6) from upstream, original repository into `production` branch. ([52c50e4](https://github.com/slsfi/topelius-frontend/commit/52c50e43606b1628003e025fdb55236582c35317))
+- Merge release [`v1.5.7`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.7) from upstream, original repository into `production` branch. ([806dcb2](https://github.com/slsfi/topelius-frontend/commit/806dcb2842bfebf2f64bd9e4c0e888d2a80cbc29))
 
 
 
@@ -32,6 +32,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 - Deps (dev): update `jasmine-core` to 5.6.0. ([7701f8a](https://github.com/slsfi/digital-edition-frontend-ng/commit/7701f8a2d14e940dc9b1f45d3bad969378b237ea))
 - Deps (dev): update `ng-extract-i18n-merge` to 2.14.3. ([d144455](https://github.com/slsfi/digital-edition-frontend-ng/commit/d1444558eaaf7bfd425e6a007f9a4f6cf74f3e83))
 - Deps (dev): update `typescript` to 5.8.2. ([4c44ed8](https://github.com/slsfi/digital-edition-frontend-ng/commit/4c44ed813347a88619d7a6f2138d5611a7d6824a))
+
+
+
+## [1.5.6-production.1] – 2025-02-03
+
+### Changed
+
+- Merge release [`v1.5.6`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.6) from upstream, original repository into `production` branch. ([52c50e4](https://github.com/slsfi/topelius-frontend/commit/52c50e43606b1628003e025fdb55236582c35317))
 
 
 
@@ -731,6 +739,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.5.7-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.5.6-production.1...1.5.7-production.1
 [1.5.6-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.5.5-production.1...1.5.6-production.1
 [1.5.5-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.5.4-production.1...1.5.5-production.1
 [1.5.4-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.5.3-production.1...1.5.4-production.1
