@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Changed
+
+- Enable searching in manuscripts.
+
 
 
 ## [1.5.7-production.1] – 2025-03-17
