@@ -8,17 +8,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
-### Changed
-
-- Enable searching in manuscripts.
 
 
-
-## [1.5.7-production.1] – 2025-03-17
+## [1.6.1-production.1] – 2025-04-30
 
 ### Changed
 
-- Merge release [`v1.5.7`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.7) from upstream, original repository into `production` branch. ([806dcb2](https://github.com/slsfi/topelius-frontend/commit/806dcb2842bfebf2f64bd9e4c0e888d2a80cbc29))
+- Enable searching in manuscripts. ([abd642a](https://github.com/slsfi/topelius-frontend/commit/abd642a294e2232f5ce0367be48b70bbb83a3e86))
+- Merge release [`v1.6.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.6.1) from upstream, original repository into `production` branch. ([fc7bd74](https://github.com/slsfi/topelius-frontend/commit/fc7bd74dd4e31f3fd4fb766045a549e15d79255c))
 
 
 
@@ -56,6 +53,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Fixed
 
 - Prebuild-scripts: handle 404 responses from API. ([e37f6ad](https://github.com/slsfi/digital-edition-frontend-ng/commit/e37f6ad6f1d28993dda3f4eaced45efecb31ae33))
+
+
+
+## [1.5.7-production.1] – 2025-03-17
+
+### Changed
+
+- Merge release [`v1.5.7`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.7) from upstream, original repository into `production` branch. ([806dcb2](https://github.com/slsfi/topelius-frontend/commit/806dcb2842bfebf2f64bd9e4c0e888d2a80cbc29))
 
 
 
@@ -783,6 +788,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.6.1-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.5.7-production.1...1.6.1-production.1
 [1.5.7-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.5.6-production.1...1.5.7-production.1
 [1.5.6-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.5.5-production.1...1.5.6-production.1
 [1.5.5-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.5.4-production.1...1.5.5-production.1
