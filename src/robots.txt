@@ -1,5 +1,8 @@
 User-agent: *
-Disallow: /search
+Disallow: /sv/search
+Disallow: /fi/search
+Disallow: /sv/index/
+Disallow: /fi/index/
 Crawl-delay: 10
 
 Sitemap: https://topelius.sls.fi/sitemap.txt
