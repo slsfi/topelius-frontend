@@ -8,18 +8,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
-### Fixed
-
-- `robots.txt`: correct disallow rules and add index-pages to disallowed.
 
 
-
-## [1.6.1-production.1] – 2025-04-30
+## [1.6.2-production.1] – 2025-05-05
 
 ### Changed
 
-- Enable searching in manuscripts. ([abd642a](https://github.com/slsfi/topelius-frontend/commit/abd642a294e2232f5ce0367be48b70bbb83a3e86))
-- Merge release [`v1.6.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.6.1) from upstream, original repository into `production` branch. ([fc7bd74](https://github.com/slsfi/topelius-frontend/commit/fc7bd74dd4e31f3fd4fb766045a549e15d79255c))
+- Merge release [`v1.6.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.6.2) from upstream, original repository into `production` branch. ([43de657](https://github.com/slsfi/topelius-frontend/commit/43de657848c7bd97e2ba9e0beb80799bcd3aee27))
+
+### Fixed
+
+- `robots.txt`: correct disallow rules and add index-pages to disallowed. ([0226241](https://github.com/slsfi/topelius-frontend/commit/0226241bd49e922ba6a753b99dd968cd0546e015))
 
 
 
@@ -37,6 +36,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Fixed
 
 - Occurrences accordion: guard against empty collection ToC, and ensure ToC subscription completes. ([f4f871f](https://github.com/slsfi/digital-edition-frontend-ng/commit/f4f871f0712853d6661e431a68bb1121b149f677))
+
+
+
+## [1.6.1-production.1] – 2025-04-30
+
+### Changed
+
+- Enable searching in manuscripts. ([abd642a](https://github.com/slsfi/topelius-frontend/commit/abd642a294e2232f5ce0367be48b70bbb83a3e86))
+- Merge release [`v1.6.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.6.1) from upstream, original repository into `production` branch. ([fc7bd74](https://github.com/slsfi/topelius-frontend/commit/fc7bd74dd4e31f3fd4fb766045a549e15d79255c))
 
 
 
@@ -810,6 +818,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.6.2-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.6.1-production.1...1.6.2-production.1
 [1.6.1-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.5.7-production.1...1.6.1-production.1
 [1.5.7-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.5.6-production.1...1.5.7-production.1
 [1.5.6-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.5.5-production.1...1.5.6-production.1
