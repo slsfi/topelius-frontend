@@ -8,22 +8,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
-### Changed
-
-- Increase `nginx` proxy buffer size to 512 KB.
-- Enable on-the-fly gzip compression of dynamically rendered HTML in `nginx`.
-- Add locale-less versions of disallow rules in `robots.txt`.
 
 
-## [1.6.2-production.1] – 2025-05-05
+## [1.6.3-production.1] – 2025-05-13
 
 ### Changed
 
-- Merge release [`v1.6.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.6.2) from upstream, original repository into `production` branch. ([43de657](https://github.com/slsfi/topelius-frontend/commit/43de657848c7bd97e2ba9e0beb80799bcd3aee27))
-
-### Fixed
-
-- `robots.txt`: correct disallow rules and add index-pages to disallowed. ([0226241](https://github.com/slsfi/topelius-frontend/commit/0226241bd49e922ba6a753b99dd968cd0546e015))
+- Add locale-less versions of disallow rules in `robots.txt`. ([2917082](https://github.com/slsfi/topelius-frontend/commit/29170826a512688e477f06a4c550556a271b1ff0))
+- Increase `nginx` proxy buffer size to 512 KB. ([bcdf8e0](https://github.com/slsfi/topelius-frontend/commit/bcdf8e081f0df1c275da65b7519a39eed0feb2f2))
+- Enable on-the-fly gzip compression of dynamically rendered HTML in `nginx`. ([aca25c0](https://github.com/slsfi/topelius-frontend/commit/aca25c066e8be2a15fb737b58ab3bdb2d5688214))
+- Merge release [`v1.6.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.6.3) from upstream, original repository into `production` branch. ([1e52fed](https://github.com/slsfi/topelius-frontend/commit/1e52fed15d5cd95286875b1b6212b8a6a4f7fedc))
 
 
 
@@ -42,6 +36,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 - Deps: update `@angular/cli` to 19.2.11 and `@angular/core` to 19.2.10. ([2bab396](https://github.com/slsfi/digital-edition-frontend-ng/commit/2bab396b55b2ab136db97fd2ad2449927720c673))
 - Deps (dev): update `@types/jasmine` to 5.1.8. ([1c549fb](https://github.com/slsfi/digital-edition-frontend-ng/commit/1c549fb83be9af82f5fc6f99cb3c5d7bc8f0c359))
 - Deps (dev): update `@types/node` to 20.17.46. ([19e7c6f](https://github.com/slsfi/digital-edition-frontend-ng/commit/19e7c6f1596bcf402da7e2fec977557b4e5c4f1c))
+
+
+
+## [1.6.2-production.1] – 2025-05-05
+
+### Changed
+
+- Merge release [`v1.6.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.6.2) from upstream, original repository into `production` branch. ([43de657](https://github.com/slsfi/topelius-frontend/commit/43de657848c7bd97e2ba9e0beb80799bcd3aee27))
+
+### Fixed
+
+- `robots.txt`: correct disallow rules and add index-pages to disallowed. ([0226241](https://github.com/slsfi/topelius-frontend/commit/0226241bd49e922ba6a753b99dd968cd0546e015))
 
 
 
@@ -842,6 +848,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.6.3-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.6.2-production.1...1.6.3-production.1
 [1.6.2-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.6.1-production.1...1.6.2-production.1
 [1.6.1-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.5.7-production.1...1.6.1-production.1
 [1.5.7-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.5.6-production.1...1.5.7-production.1
