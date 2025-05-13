@@ -8,6 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Changed
+
+- Add locale-less versions of disallow rules in `robots.txt`.
 
 
 ## [1.6.2-production.1] – 2025-05-05
