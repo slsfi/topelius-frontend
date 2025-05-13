@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ### Changed
 
+- Increase `nginx` proxy buffer size to 512 KB.
 - Add locale-less versions of disallow rules in `robots.txt`.
 
 
