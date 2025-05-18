@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Changed
 
 - Roll back to `v1.6.1-production.1` and `nginx` `1.26.3` in `compose.yml` to investigate performance issue.
+- Roll back to `v1.5.7-production.1` in `compose.yml` to investigate performance issue.
 
 
 
