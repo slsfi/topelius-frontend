@@ -237,3 +237,39 @@ export async function urlExists(url: string) {
     return 0;
   }
 }
+
+
+/**
+ * Check if a front matter page should be enabled for a collection,
+ * or if a view type should be enabled for the text pages in a
+ * collection.
+ * @param pageType one of 'cover', 'title', 'foreword', 'introduction', 'text'
+ * @param collectionId string
+ * @param config object
+ * @param viewType string | undefined: only applicable if pageType = 'text',
+ * one of 'readingtext', 'comments', 'facsimiles', 'manuscripts', 'variants',
+ * 'illustrations', 'legend', 'metadata'
+ * @returns boolean
+ */
+export function enableFrontMatterPageOrTextViewType(
+  pageType: string,
+  collectionId: string,
+  config: any,
+  viewType?: string
+) {
+  const defaultEnable: boolean = (pageType === 'text')
+    ? config.page?.text?.viewTypes?.[viewType || ''] ?? false
+    : config.collections?.frontMatterPages?.[pageType] ?? false;
+
+  if (!defaultEnable) {
+    return false;
+  }
+
+  const collection = Number(collectionId);
+
+  const disabledCollections: number[] = (pageType === 'text')
+    ? config.page?.text?.viewTypeDisabledCollections?.[viewType || ''] ?? []
+    : config.collections?.frontMatterPageDisabled?.[pageType] ?? [];
+
+  return !disabledCollections.includes(collection);
+}
