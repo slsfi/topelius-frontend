@@ -8,9 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [2.4.2-production.2] – 2026-01-13
+
 ### Removed
 
-- CookieYes code snippet from `index.html`.
+- CookieYes code snippet from `index.html`. ([658d530](https://github.com/slsfi/topelius-frontend/commit/658d53019de4211c1517ce7ab4e70a7c9f537add))
 
 
 
@@ -1455,6 +1459,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[2.4.2-production.2]: https://github.com/slsfi/topelius-frontend/compare/2.4.2-production.1...2.4.2-production.2
 [2.4.2-production.1]: https://github.com/slsfi/topelius-frontend/compare/2.0.0-production.1...2.4.2-production.1
 [2.0.0-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.8.2-production.1...2.0.0-production.1
 [1.8.2-production.1]: https://github.com/slsfi/topelius-frontend/compare/1.7.0-production.1...1.8.2-production.1
