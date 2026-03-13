@@ -479,16 +479,6 @@ page-elastic-search {
   }
 }
 
-/* Cookiebannern */
-a.cky-banner-element {
-  cursor: pointer;
-  text-decoration: underline;
-}
-#cky-consent,
-#cky-settings-popup {
-	font-family: var(--font-stack-app-base);
-}
-
 /*
 Legacy styles for intro TOC and some headings in actual intro only used
 in the Finnish intros that have not been converted to new coding style yet.
