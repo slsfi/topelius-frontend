@@ -8,22 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
-### Changed
-
-- Update to base version [`2.6.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.6.3) from upstream, original repository.
 
 
-
-## [2.6.1-production.1] – 2026-03-13
+## [2.6.3-production.1] – 2026-03-30
 
 ### Changed
 
-- Update to base version [`2.6.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.6.1) from upstream, original repository. ([0c164d8](https://github.com/slsfi/topelius-frontend/commit/0c164d85d145fa02a5cd3c57583299cd568e2303))
-- Enable feature based routes and separate cookie policy page in config. ([21eae59](https://github.com/slsfi/topelius-frontend/commit/21eae5937f29fe76fc5b6d6c899b948bafa51104))
-
-### Removed
-
-- Cookie banner CSS from `custom.scss`. ([e627421](https://github.com/slsfi/topelius-frontend/commit/e627421951f7af0d3d9c1bea3e750270ae07f56e))
+- Update to base version [`2.6.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.6.3) from upstream, original repository. ([27f1f62](https://github.com/slsfi/topelius-frontend/commit/27f1f623b5757503e5a639dd2d2952c42de4bde2))
 
 
 
@@ -55,6 +46,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 - Clear transient feedback on cached auth pages. ([3f294fa](https://github.com/slsfi/digital-edition-frontend-ng/commit/3f294fadd4d908ae50d95aa16cfc55eee4eec2d3))
 - Auth: treat invalid link as terminal state for password reset page. ([dade0f6](https://github.com/slsfi/digital-edition-frontend-ng/commit/dade0f60ec05ce6cc50735bdd362a931bdd606ce))
+
+
+
+## [2.6.1-production.1] – 2026-03-13
+
+### Changed
+
+- Update to base version [`2.6.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.6.1) from upstream, original repository. ([0c164d8](https://github.com/slsfi/topelius-frontend/commit/0c164d85d145fa02a5cd3c57583299cd568e2303))
+- Enable feature based routes and separate cookie policy page in config. ([21eae59](https://github.com/slsfi/topelius-frontend/commit/21eae5937f29fe76fc5b6d6c899b948bafa51104))
+
+### Removed
+
+- Cookie banner CSS from `custom.scss`. ([e627421](https://github.com/slsfi/topelius-frontend/commit/e627421951f7af0d3d9c1bea3e750270ae07f56e))
 
 
 
@@ -1672,6 +1676,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[2.6.3-production.1]: https://github.com/slsfi/topelius-frontend/compare/2.6.1-production.1...2.6.3-production.1
 [2.6.1-production.1]: https://github.com/slsfi/topelius-frontend/compare/2.4.6-production.1...2.6.1-production.1
 [2.4.6-production.1]: https://github.com/slsfi/topelius-frontend/compare/2.4.2-production.2...2.4.6-production.1
 [2.4.2-production.2]: https://github.com/slsfi/topelius-frontend/compare/2.4.2-production.1...2.4.2-production.2
