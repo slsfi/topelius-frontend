@@ -8,9 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [2.7.5-production.2] – 2026-07-15
+
 ### Fixed
 
-- CSS for figures.
+- CSS for figures. ([d65246f](https://github.com/slsfi/topelius-frontend/commit/d65246fa17736099138c6042a2d2d4dc2e84e1ab))
 
 
 
@@ -1846,6 +1850,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[2.7.5-production.2]: https://github.com/slsfi/topelius-frontend/compare/2.7.5-production.1...2.7.5-production.2
 [2.7.5-production.1]: https://github.com/slsfi/topelius-frontend/compare/2.7.0-production.1...2.7.5-production.1
 [2.7.0-production.1]: https://github.com/slsfi/topelius-frontend/compare/2.6.5-production.1...2.7.0-production.1
 [2.6.5-production.1]: https://github.com/slsfi/topelius-frontend/compare/2.6.3-production.1...2.6.5-production.1
