@@ -8,9 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [2.7.9-production.1] – 2026-09-03
+
 ### Changed
 
-- Update to base version [`2.7.9`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.7.9) from upstream, original repository.
+- Update to base version [`2.7.9`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.7.9) from upstream, original repository. ([933c392](https://github.com/slsfi/topelius-frontend/commit/933c392ff7ca83d5c6acc4a7201cf01e5df968a0))
 
 
 
@@ -1927,6 +1931,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[2.7.9-production.1]: https://github.com/slsfi/topelius-frontend/compare/2.7.8-production.1...2.7.9-production.1
 [2.7.8-production.1]: https://github.com/slsfi/topelius-frontend/compare/2.7.7-production.1...2.7.8-production.1
 [2.7.7-production.1]: https://github.com/slsfi/topelius-frontend/compare/2.7.5-production.2...2.7.7-production.1
 [2.7.5-production.2]: https://github.com/slsfi/topelius-frontend/compare/2.7.5-production.1...2.7.5-production.2
