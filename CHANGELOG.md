@@ -8,10 +8,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [3.0.1-production.1] – 2026-09-08
+
 ### Changed
 
-- Update to base version [`3.0.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/3.0.1) from upstream, original repository.
-- Align `custom.scss` with v3.0.0 changes.
+- Update to base version [`3.0.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/3.0.1) from upstream, original repository. ([3f56444](https://github.com/slsfi/topelius-frontend/commit/3f564448c86e978b9cf586c1decd8f31046aa2b5))
+- Align `custom.scss` with v3.0.0 changes. ([3edfc0d](https://github.com/slsfi/topelius-frontend/commit/3edfc0d1fa299109ac5a7887a9e0e273006421ca))
 
 
 
@@ -1998,6 +2002,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[3.0.1-production.1]: https://github.com/slsfi/topelius-frontend/compare/2.7.9-production.1...3.0.1-production.1
 [2.7.9-production.1]: https://github.com/slsfi/topelius-frontend/compare/2.7.8-production.1...2.7.9-production.1
 [2.7.8-production.1]: https://github.com/slsfi/topelius-frontend/compare/2.7.7-production.1...2.7.8-production.1
 [2.7.7-production.1]: https://github.com/slsfi/topelius-frontend/compare/2.7.5-production.2...2.7.7-production.1
