@@ -290,21 +290,13 @@ page-elastic-search[class][class] {
 
 /* Sidans rubrik på ingångssidan. */
 page-home {
-  .portrait-mode {
-    .banner {
-      background-color: var(--secondary-toolbar-color);
-    }
-
-    h1.site-title.site-title.site-title {
-      font-family: "Crimson Pro", "SourceSerif", serif;
-      font-size: 2.8em;
-      font-style: normal;
-      font-weight: 300;
-      letter-spacing: 0.042em;
-      text-align: center;
-      text-transform: uppercase;
-    }
-  }
+  --portrait-banner-background-color: var(--secondary-toolbar-color);
+  --portrait-site-title-font-family: "Crimson Pro", "SourceSerif", serif;
+  --portrait-site-title-font-size: 2.8em;
+  --portrait-site-title-font-weight: 300;
+  --portrait-site-title-letter-spacing: 0.042em;
+  --portrait-site-title-text-transform: uppercase;
+  --text-content-max-width: 1000px;
 
   .frontpage-editions-list {
     column-gap: 1.5em;
@@ -329,12 +321,6 @@ page-home {
   .frontpage-editions-list-col {
     max-width: 440px;
     width: 100%;
-  }
-
-  /* Unesco logon i markdown på startsidan. */
-  img[src$="#front-page-unesco-logo"] {
-    display: block;
-    margin: 3em auto;
   }
 } 
 
