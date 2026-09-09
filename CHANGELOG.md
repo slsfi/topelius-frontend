@@ -10,7 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
-## [3.0.1-production.1] – 2026-09-08
+## [3.0.1-production.1] – 2026-09-09
 
 ### Changed
 
