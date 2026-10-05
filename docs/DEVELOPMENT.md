@@ -148,6 +148,21 @@ npm install @ionic/angular @ionic/angular-server
 ```
 
 
+### [`dom-serializer`][npm_dom-serializer]
+
+Serializes the DOM produced by `htmlparser2` back to HTML after the app updates image paths and class names.
+
+
+### [`domhandler`][npm_domhandler]
+
+Builds a DOM tree from `htmlparser2` parser events. Provides the `DomHandler` class and node type guards such as `isTag`. Import the type guards directly from `domhandler`; their deprecated re-exports were removed from `domutils` in version 4.
+
+
+### [`domutils`][npm_domutils]
+
+Utilities for querying and traversing the DOM produced by `domhandler`, used to find headings and illustrations and inspect their attributes.
+
+
 ### [`express`][npm_express]
 
 Framework for running a web server in Node.js. This library is required by Angular to enable server-side rendering.
@@ -160,6 +175,8 @@ Middleware used for app-level request limiting of dynamic SSR/CSR shell response
 ### [`htmlparser2`][npm_htmlparser2]
 
 SSR-compatible HTML/XML parser, used in a few places in the app to parse HTML from the backend.
+
+[`HtmlParserService`](../src/app/services/html-parser.service.ts) uses `domhandler`, `domutils`, and `dom-serializer` alongside `htmlparser2`. All four packages are declared as direct runtime dependencies in `package.json` because application code imports them. Keep their versions compatible with `htmlparser2` when updating so that application imports do not depend on which versions npm installs transitively through Angular's build tooling.
 
 
 ### [`ionicons`][npm_ionicons]
@@ -244,6 +261,7 @@ npm ci
 npm run test:ci
 npm run test:source-encoding
 npm run test:routes-parser
+npm run test:static-collection-menus
 npm run build:ssr
 ```
 
@@ -271,6 +289,7 @@ Use the Angular/Jasmine unit suite as the primary automated check, with the scri
 - `npm run test:ci`: run the full Angular/Jasmine unit suite once in headless Chrome; use this for pre-PR verification.
 - `npm run test:source-encoding`: validate source-file encoding and BOM usage.
 - `npm run test:routes-parser`: verify route parser/generator behavior; run it after changes to `prebuild-generate-routes.js` or generator-facing route syntax in `src/app/app.routes.ts`.
+- `npm run test:static-collection-menus`: verify that shared non-multilingual TOCs are fetched once, per-locale menu files are generated, and fetch retries back off as expected; run it after changes to `prebuild-generate-static-collection-menus.js` or shared fetch retry behavior in `prebuild-common-fns.js`.
 - `npm run test:ssr:smoke`: verify selected server-rendered responses against a running SSR app; build and start the app first, or pass `--base-url` to target another running environment.
 
 When changing `app.routes.ts` or a lazy `*.routes.ts` file, also update and run the Angular route-recognition specs. For SSR-specific changes, run `npm run build:ssr`, start the built app with `npm run serve:ssr`, and then run `npm run test:ssr:smoke` in another terminal. The detailed route-parser and SSR smoke-test sections below describe those workflows further.
@@ -504,6 +523,9 @@ Cross-cutting future work that should stay visible outside local code comments i
 [docker_compose_file]: ../compose.yml
 [docker_desktop]: https://www.docker.com/products/docker-desktop/
 [dockerfile]: ../Dockerfile
+[npm_dom-serializer]: https://www.npmjs.com/package/dom-serializer
+[npm_domhandler]: https://www.npmjs.com/package/domhandler
+[npm_domutils]: https://www.npmjs.com/package/domutils
 [npm_express]: https://www.npmjs.com/package/express
 [npm_express-rate-limit]: https://www.npmjs.com/package/express-rate-limit
 [npm_htmlparser2]: https://www.npmjs.com/package/htmlparser2
