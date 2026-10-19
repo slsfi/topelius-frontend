@@ -41,6 +41,7 @@ export const config: Config = {
     },
     ssr: {
       trustProxyHops: 2,
+      trustedProxyAddresses: ["loopback", "linklocal", "uniquelocal"],
       collectionSideMenu: false
     }
   },
@@ -88,6 +89,9 @@ export const config: Config = {
     },
     article: {
       showTextDownloadButton: false,
+      showURNButton: false
+    },
+    ebook: {
       showURNButton: false
     },
     elasticSearch: {
@@ -337,7 +341,8 @@ export const config: Config = {
         accessibilityStatement: false,
       },
       defaultExpanded: false,
-      ungroupArticles: false
+      ungroupArticles: false,
+      ungroupIndices: false
     },
     manuscripts: {
       showTitle: true,
