@@ -8,10 +8,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [4.1.0-production.1] – 2026-10-23
+
 ### Changed
 
-- Update to base version [`4.1.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/4.1.0) from upstream, original repository.
-- Enable static, localized collection cover metadata.
+- Update to base version [`4.1.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/4.1.0) from upstream, original repository. ([0cce07e](https://github.com/slsfi/topelius-frontend/commit/0cce07e082a92919d5918214b877f611c1b98de7))
+- Enable static, localized collection cover metadata. ([50642e8](https://github.com/slsfi/topelius-frontend/commit/50642e83e826bd097a769f5be9f6eb64478e16fa))
 
 
 
@@ -2181,6 +2185,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[4.1.0-production.1]: https://github.com/slsfi/topelius-frontend/compare/4.0.0-production.1...4.1.0-production.1
 [4.0.0-production.1]: https://github.com/slsfi/topelius-frontend/compare/3.1.1-production.1...4.0.0-production.1
 [3.1.1-production.1]: https://github.com/slsfi/topelius-frontend/compare/3.1.0-production.1...3.1.1-production.1
 [3.1.0-production.1]: https://github.com/slsfi/topelius-frontend/compare/3.0.1-production.1...3.1.0-production.1
