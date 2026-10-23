@@ -48,7 +48,7 @@ export const config: Config = {
   articles: [],
   collections: {
     addTEIClassNames: false,
-    useStaticCoverData: false,
+    useStaticCoverData: true,
     replaceImageAssetsPaths: false,
     enableLegacyIDs: true,
     enableMathJax: false,
