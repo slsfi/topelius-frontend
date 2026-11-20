@@ -8,18 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
-### Changed
-
-- Update to base version [`4.2.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/4.2.1) from upstream, original repository.
 
 
-
-## [4.1.0-production.1] – 2026-10-23
+## [4.2.1-production.1] – 2026-11-20
 
 ### Changed
 
-- Update to base version [`4.1.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/4.1.0) from upstream, original repository. ([0cce07e](https://github.com/slsfi/topelius-frontend/commit/0cce07e082a92919d5918214b877f611c1b98de7))
-- Enable static, localized collection cover metadata. ([50642e8](https://github.com/slsfi/topelius-frontend/commit/50642e83e826bd097a769f5be9f6eb64478e16fa))
+- Update to base version [`4.2.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/4.2.1) from upstream, original repository. ([d8dc0d0](https://github.com/slsfi/topelius-frontend/commit/d8dc0d02f63d8251a73b9801579b4ac6823ed6f6))
 
 
 
@@ -70,6 +65,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 - Deps: update `tslib` to 2.9.1. ([187f1eb](https://github.com/slsfi/digital-edition-frontend-ng/commit/187f1eb1a90d172a1d028744e9dcc4da214e5105))
 - Deps (dev): update `vitest` to 5.1.0. ([faf0201](https://github.com/slsfi/digital-edition-frontend-ng/commit/faf0201e521953c67df48f7813a1e4dbfb05a53c))
 - Deps: update transitive dependencies. ([f8187a3](https://github.com/slsfi/digital-edition-frontend-ng/commit/f8187a3a8dcd42a4283e43dd94b13b3c7711ae1f))
+
+
+
+## [4.1.0-production.1] – 2026-10-23
+
+### Changed
+
+- Update to base version [`4.1.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/4.1.0) from upstream, original repository. ([0cce07e](https://github.com/slsfi/topelius-frontend/commit/0cce07e082a92919d5918214b877f611c1b98de7))
+- Enable static, localized collection cover metadata. ([50642e8](https://github.com/slsfi/topelius-frontend/commit/50642e83e826bd097a769f5be9f6eb64478e16fa))
 
 
 
@@ -2242,6 +2246,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[4.2.1-production.1]: https://github.com/slsfi/topelius-frontend/compare/4.1.0-production.1...4.2.1-production.1
 [4.1.0-production.1]: https://github.com/slsfi/topelius-frontend/compare/4.0.0-production.1...4.1.0-production.1
 [4.0.0-production.1]: https://github.com/slsfi/topelius-frontend/compare/3.1.1-production.1...4.0.0-production.1
 [3.1.1-production.1]: https://github.com/slsfi/topelius-frontend/compare/3.1.0-production.1...3.1.1-production.1
